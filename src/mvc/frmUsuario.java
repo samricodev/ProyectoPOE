@@ -7,6 +7,7 @@ package mvc;
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -36,14 +37,15 @@ public Image getIconImage(){
         jlbUsuario = new javax.swing.JLabel();
         jlbContraseña = new javax.swing.JLabel();
         jtfUsuario = new javax.swing.JTextField();
-        jtfContraseña = new javax.swing.JTextField();
         btnIngresar = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
         jlbMensajes = new javax.swing.JLabel();
+        jpfContraseña = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio de sesion");
         setIconImage(getIconImage());
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -77,25 +79,6 @@ public Image getIconImage(){
             }
         });
 
-        jtfContraseña.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                jtfContraseñaMouseDragged(evt);
-            }
-        });
-        jtfContraseña.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jtfContraseñaMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jtfContraseñaMouseExited(evt);
-            }
-        });
-        jtfContraseña.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtfContraseñaActionPerformed(evt);
-            }
-        });
-
         btnIngresar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ingresar.png"))); // NOI18N
         btnIngresar.setText("Ingresar");
@@ -105,6 +88,11 @@ public Image getIconImage(){
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnIngresarMouseExited(evt);
+            }
+        });
+        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIngresarActionPerformed(evt);
             }
         });
 
@@ -117,6 +105,11 @@ public Image getIconImage(){
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnSalirMouseExited(evt);
+            }
+        });
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
             }
         });
 
@@ -134,12 +127,12 @@ public Image getIconImage(){
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jlbContraseña, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jtfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jpfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jlbUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(55, 55, 55)
                         .addComponent(jtfUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -167,10 +160,10 @@ public Image getIconImage(){
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlbContraseña)
-                    .addComponent(jtfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jpfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jlbMensajes)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSalir)
                     .addComponent(btnIngresar))
@@ -181,26 +174,16 @@ public Image getIconImage(){
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(523, 377));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jtfContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfContraseñaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfContraseñaActionPerformed
 
     private void jtfUsuarioMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtfUsuarioMouseDragged
    
@@ -210,21 +193,9 @@ public Image getIconImage(){
         jtfUsuario.setBackground(Color.blue);
     }//GEN-LAST:event_jtfUsuarioMouseEntered
 
-    private void jtfContraseñaMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtfContraseñaMouseDragged
-       
-    }//GEN-LAST:event_jtfContraseñaMouseDragged
-
-    private void jtfContraseñaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtfContraseñaMouseEntered
-      jtfContraseña.setBackground(Color.blue);
-    }//GEN-LAST:event_jtfContraseñaMouseEntered
-
     private void jtfUsuarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtfUsuarioMouseExited
         jtfUsuario.setBackground(Color.white);
     }//GEN-LAST:event_jtfUsuarioMouseExited
-
-    private void jtfContraseñaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtfContraseñaMouseExited
-        jtfContraseña.setBackground(Color.white);
-    }//GEN-LAST:event_jtfContraseñaMouseExited
 
     private void btnIngresarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIngresarMouseEntered
        btnIngresar.setBackground(Color.green);
@@ -241,6 +212,19 @@ public Image getIconImage(){
     private void btnSalirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSalirMouseExited
         btnSalir.setBackground(Color.white);
     }//GEN-LAST:event_btnSalirMouseExited
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
+        if(jtfUsuario.getText().equals("admin") && jpfContraseña.getText().equals("solopersonal")){
+            JOptionPane.showMessageDialog(null, "Listo a ingresado");
+        } else {
+            JOptionPane.showMessageDialog(null, "No puedes acceder, Comunicate con tu jefe");
+            System.exit(0);
+        }
+    }//GEN-LAST:event_btnIngresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -285,7 +269,7 @@ public Image getIconImage(){
     private javax.swing.JLabel jlbInicio;
     private javax.swing.JLabel jlbMensajes;
     private javax.swing.JLabel jlbUsuario;
-    private javax.swing.JTextField jtfContraseña;
+    private javax.swing.JPasswordField jpfContraseña;
     private javax.swing.JTextField jtfUsuario;
     // End of variables declaration//GEN-END:variables
 }
