@@ -94,14 +94,14 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 439, Short.MAX_VALUE)
+            .addGap(0, 464, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 277, Short.MAX_VALUE)
+            .addGap(0, 328, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(455, 339));
+        setSize(new java.awt.Dimension(478, 358));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
