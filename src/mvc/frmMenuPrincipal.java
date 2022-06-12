@@ -36,6 +36,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         jmiSMostrar = new javax.swing.JMenuItem();
         jmProductos = new javax.swing.JMenu();
         jmiPORegistar = new javax.swing.JMenuItem();
+        jmiPOEditar = new javax.swing.JMenuItem();
         jmProveedores = new javax.swing.JMenu();
         jmCompras = new javax.swing.JMenu();
         jmClientes = new javax.swing.JMenu();
@@ -73,6 +74,9 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
 
         jmiPORegistar.setText("Registrar");
         jmProductos.add(jmiPORegistar);
+
+        jmiPOEditar.setText("Editar");
+        jmProductos.add(jmiPOEditar);
 
         jmbMenu.add(jmProductos);
 
@@ -167,6 +171,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jmSucursales;
     private javax.swing.JMenu jmVentas;
     private javax.swing.JMenuBar jmbMenu;
+    private javax.swing.JMenuItem jmiPOEditar;
     private javax.swing.JMenuItem jmiPORegistar;
     private javax.swing.JMenuItem jmiSBuscar;
     private javax.swing.JMenuItem jmiSEditar;
