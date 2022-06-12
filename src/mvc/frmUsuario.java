@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package mvc;
 
 import java.awt.Color;
@@ -9,26 +6,16 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author ramos
- */
-public class frmUsuario extends javax.swing.JFrame {
 
-    /**
-     * Creates new form frmUsuario
-     */
-    public frmUsuario() {
+public class frmUsuario extends javax.swing.JFrame {
+    //Prueba
+    
+    
+    public frmUsuario() {        
         initComponents();
     }
 
-    /*
-    @Override
-public Image getIconImage(){
-    // Se elige de los recursos de imagenes,la que se utilizará como icono
-  // Image valorRetorno = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Imagenes/licoreria.png"));
-   // return valorRetorno;
-}*/
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
