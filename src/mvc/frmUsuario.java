@@ -201,7 +201,10 @@ public class frmUsuario extends javax.swing.JFrame {
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         if(jtxfUsuario.getText().equals("admin") && jtxfContraseña.getText().equals("solopersonal")){
-            JOptionPane.showMessageDialog(null, "Listo a ingresado");
+           frmMenuPrincipal frmMenu = new frmMenuPrincipal();
+           frmMenu.setVisible(true);
+           this.setVisible(false);
+// JOptionPane.showMessageDialog(null, "Listo a ingresado");
         } else {
             JOptionPane.showMessageDialog(null, "No puedes acceder, Comunicate con tu jefe");
             System.exit(0);
