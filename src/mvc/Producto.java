@@ -1,58 +1,63 @@
+
 //Equipo 4
 package mvc;
 
 public class Producto {
     private int id;
     private String nombre;
-    private float contenido;
+    private String contenido;
     private int unidades;
     private float costo;
+    
+    //CONSTRUCTOR 
 
-    Producto(int id, String nombre, float contenido, int unidades, float costo) {
+    public Producto(int id, String nombre, String contenido, int unidades, float costo) {
         this.id = id;
         this.nombre = nombre;
         this.contenido = contenido;
         this.unidades = unidades;
         this.costo = costo;
     }
+    
+    //SET N GET 
 
-    public int getId(){
+    public int getId() {
         return id;
     }
 
-    public void setId(int id){
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getNombre(){
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre){
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public float getContenido(){
+    public String getContenido() {
         return contenido;
     }
 
-    public void setContenido(float contenido){
+    public void setContenido(String contenido) {
         this.contenido = contenido;
     }
 
-    public int getUnidades(){
+    public int getUnidades() {
         return unidades;
     }
 
-    public void setUnidades(int unidades){
+    public void setUnidades(int unidades) {
         this.unidades = unidades;
     }
 
-    public float getCosto(){
+    public float getCosto() {
         return costo;
     }
 
-    public void setCosto(float costo){
+    public void setCosto(float costo) {
         this.costo = costo;
-    }
+    }   
 }
