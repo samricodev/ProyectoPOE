@@ -8,6 +8,9 @@ public class Cliente {
     private int compras;
     private boolean incidentes;
     
+    //apuntador
+    private Cliente siguiente;
+    
     //CONSTRUCTOR
 
     public Cliente(int id, String nombre, int tipo, int compras, boolean incidentes) {
@@ -16,6 +19,8 @@ public class Cliente {
         this.tipo = tipo;
         this.compras = compras;
         this.incidentes = incidentes;
+        this.siguiente = siguiente;
+        this.siguiente = null;
     }
     
     //SETTER N GETTER 
@@ -58,6 +63,14 @@ public class Cliente {
 
     public void setIncidentes(boolean incidentes) {
         this.incidentes = incidentes;
+    }
+
+    public Cliente getSiguiente() {
+        return siguiente;
+    }
+
+    public void setSiguiente(Cliente siguiente) {
+        this.siguiente = siguiente;
     }
     
 }
