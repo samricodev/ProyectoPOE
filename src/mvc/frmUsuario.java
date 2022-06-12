@@ -204,7 +204,7 @@ public class frmUsuario extends javax.swing.JFrame {
            frmMenuPrincipal frmMenu = new frmMenuPrincipal();
            frmMenu.setVisible(true);
            this.setVisible(false);
-// JOptionPane.showMessageDialog(null, "Listo a ingresado");
+
         } else {
             JOptionPane.showMessageDialog(null, "No puedes acceder, Comunicate con tu jefe");
             System.exit(0);
