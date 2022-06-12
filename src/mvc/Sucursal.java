@@ -1,19 +1,24 @@
-//Equipo 4
+
 package mvc;
 
 public class Sucursal {
     private int id;
     private String localidad;
-    private String tipo;
+    private int tipo;
     private int capacidad;
     private float ventas_prom;
+    
+    //apuntador
+    private Sucursal siguiente;
 
-    Sucursal(int id, String localidad, String tipo, int capacidad, float ventas_prom) {
+    Sucursal(int id, String localidad, int tipo, int capacidad, float ventas_prom) {
         this.id = id;
         this.localidad = localidad;
         this.tipo = tipo;
         this.capacidad = capacidad;
         this.ventas_prom = ventas_prom;
+        this.siguiente = siguiente;
+        this.siguiente = null;
     }
 
     public int getId(){
@@ -32,11 +37,11 @@ public class Sucursal {
         this.localidad = localidad;
     }
 
-    public String getTipo(){
+    public int getTipo(){
         return tipo;
     }
 
-    public void setTipo(String tipo){
+    public void setTipo(int tipo){
         this.tipo = tipo;
     }
 
@@ -54,6 +59,14 @@ public class Sucursal {
 
     public void setVentas_prom(float ventas_prom){
         this.ventas_prom = ventas_prom;
+    }   
+
+    public Sucursal getSiguiente() {
+        return siguiente;
+    }
+
+    public void setSiguiente(Sucursal siguiente) {
+        this.siguiente = siguiente;
     }
     
     
