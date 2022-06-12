@@ -8,8 +8,7 @@ import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.JOptionPane;
-//prueba de push
-//prueba de revision de los usuarios
+
 /**
  *
  * @author ramos
@@ -23,66 +22,75 @@ public class frmUsuario extends javax.swing.JFrame {
         initComponents();
     }
 
+    /*
     @Override
 public Image getIconImage(){
     // Se elige de los recursos de imagenes,la que se utilizará como icono
-   Image valorRetorno = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Imagenes/licoreria.png"));
-    return valorRetorno;
-}
+  // Image valorRetorno = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Imagenes/licoreria.png"));
+   // return valorRetorno;
+}*/
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
         jlbInicio = new javax.swing.JLabel();
+        jtxfUsuario = new javax.swing.JTextField();
         jlbUsuario = new javax.swing.JLabel();
         jlbContraseña = new javax.swing.JLabel();
-        jtfUsuario = new javax.swing.JTextField();
+        jtxfContraseña = new javax.swing.JPasswordField();
+        jlbMensajes = new javax.swing.JLabel();
         btnIngresar = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
-        jlbMensajes = new javax.swing.JLabel();
-        jpfContraseña = new javax.swing.JPasswordField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio de sesion");
         setIconImage(getIconImage());
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jlbInicio.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
         jlbInicio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlbInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/iniciar-sesion.png"))); // NOI18N
-        jlbInicio.setText("Inicio de sesion");
-        jlbInicio.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jlbInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/user.png"))); // NOI18N
+
+        jtxfUsuario.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jtxfUsuarioMouseDragged(evt);
+            }
+        });
+        jtxfUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jtxfUsuarioMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jtxfUsuarioMouseExited(evt);
+            }
+        });
+        jtxfUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtxfUsuarioActionPerformed(evt);
+            }
+        });
 
         jlbUsuario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jlbUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        jlbUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/usuario.png"))); // NOI18N
-        jlbUsuario.setText("Usuario:");
+        jlbUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/user (1).png"))); // NOI18N
 
         jlbContraseña.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jlbContraseña.setForeground(new java.awt.Color(255, 255, 255));
-        jlbContraseña.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/contrasena.png"))); // NOI18N
-        jlbContraseña.setText("Contraseña:");
+        jlbContraseña.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/key.png"))); // NOI18N
 
-        jtfUsuario.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                jtfUsuarioMouseDragged(evt);
-            }
-        });
-        jtfUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jtfUsuarioMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jtfUsuarioMouseExited(evt);
-            }
-        });
+        jlbMensajes.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 13)); // NOI18N
+        jlbMensajes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlbMensajes.setText("Ingrese sus credenciales para iniciar sesion");
 
-        btnIngresar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ingresar.png"))); // NOI18N
+        btnIngresar.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 14)); // NOI18N
+        btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/log-in.png"))); // NOI18N
         btnIngresar.setText("Ingresar");
+        btnIngresar.setBorder(null);
+        btnIngresar.setContentAreaFilled(false);
         btnIngresar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnIngresarMouseEntered(evt);
@@ -97,9 +105,11 @@ public Image getIconImage(){
             }
         });
 
-        btnSalir.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/eliminar.png"))); // NOI18N
+        btnSalir.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 14)); // NOI18N
+        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/log-out.png"))); // NOI18N
         btnSalir.setText("Salir");
+        btnSalir.setBorder(null);
+        btnSalir.setContentAreaFilled(false);
         btnSalir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnSalirMouseEntered(evt);
@@ -114,61 +124,65 @@ public Image getIconImage(){
             }
         });
 
-        jlbMensajes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jlbMensajes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlbMensajes.setText("Mensajes");
+        jLabel1.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel1.setText("Login");
+        jLabel1.setToolTipText("");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jlbInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(165, 165, 165))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jlbContraseña, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jpfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jlbUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(55, 55, 55)
-                        .addComponent(jtfUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addGap(69, 69, 69)
+                .addComponent(btnIngresar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnSalir)
+                .addGap(60, 60, 60))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(106, 106, 106)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jlbMensajes)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(101, 101, 101)
-                        .addComponent(btnIngresar)
-                        .addGap(57, 57, 57)
-                        .addComponent(btnSalir))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addComponent(jlbInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(131, 131, 131)
-                        .addComponent(jlbMensajes, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jlbUsuario)
+                            .addComponent(jlbContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jtxfContraseña, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
+                            .addComponent(jtxfUsuario))))
+                .addContainerGap(103, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(177, 177, 177))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
+                .addGap(86, 86, 86)
                 .addComponent(jlbInicio)
-                .addGap(41, 41, 41)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlbUsuario)
-                    .addComponent(jtfUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlbContraseña)
-                    .addComponent(jpfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabel1)
+                .addGap(34, 34, 34)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jtxfUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlbUsuario))
                 .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jtxfContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlbContraseña))
+                .addGap(31, 31, 31)
                 .addComponent(jlbMensajes)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSalir)
                     .addComponent(btnIngresar))
-                .addGap(34, 34, 34))
+                .addGap(49, 49, 49))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -182,50 +196,54 @@ public Image getIconImage(){
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(523, 377));
+        setSize(new java.awt.Dimension(473, 600));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jtfUsuarioMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtfUsuarioMouseDragged
-   
-    }//GEN-LAST:event_jtfUsuarioMouseDragged
-
-    private void jtfUsuarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtfUsuarioMouseEntered
-        jtfUsuario.setBackground(Color.blue);
-    }//GEN-LAST:event_jtfUsuarioMouseEntered
-
-    private void jtfUsuarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtfUsuarioMouseExited
-        jtfUsuario.setBackground(Color.white);
-    }//GEN-LAST:event_jtfUsuarioMouseExited
-
-    private void btnIngresarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIngresarMouseEntered
-       btnIngresar.setBackground(Color.green);
-    }//GEN-LAST:event_btnIngresarMouseEntered
-
-    private void btnIngresarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIngresarMouseExited
-         btnIngresar.setBackground(Color.white);
-    }//GEN-LAST:event_btnIngresarMouseExited
-
-    private void btnSalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSalirMouseEntered
-        btnSalir.setBackground(Color.red);
-    }//GEN-LAST:event_btnSalirMouseEntered
-
-    private void btnSalirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSalirMouseExited
-        btnSalir.setBackground(Color.white);
-    }//GEN-LAST:event_btnSalirMouseExited
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         System.exit(0);
     }//GEN-LAST:event_btnSalirActionPerformed
 
+    private void btnSalirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSalirMouseExited
+       // btnSalir.setBackground(Color.white);
+    }//GEN-LAST:event_btnSalirMouseExited
+
+    private void btnSalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSalirMouseEntered
+      //  btnSalir.setBackground(Color.red);
+    }//GEN-LAST:event_btnSalirMouseEntered
+
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
-        if(jtfUsuario.getText().equals("admin") && jpfContraseña.getText().equals("solopersonal")){
+        if(jtxfUsuario.getText().equals("admin") && jtxfContraseña.getText().equals("solopersonal")){
             JOptionPane.showMessageDialog(null, "Listo a ingresado");
         } else {
             JOptionPane.showMessageDialog(null, "No puedes acceder, Comunicate con tu jefe");
             System.exit(0);
         }
     }//GEN-LAST:event_btnIngresarActionPerformed
+
+    private void btnIngresarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIngresarMouseExited
+   
+    }//GEN-LAST:event_btnIngresarMouseExited
+
+    private void btnIngresarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIngresarMouseEntered
+       
+    }//GEN-LAST:event_btnIngresarMouseEntered
+
+    private void jtxfUsuarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxfUsuarioMouseExited
+       
+    }//GEN-LAST:event_jtxfUsuarioMouseExited
+
+    private void jtxfUsuarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxfUsuarioMouseEntered
+        
+    }//GEN-LAST:event_jtxfUsuarioMouseEntered
+
+    private void jtxfUsuarioMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtxfUsuarioMouseDragged
+
+    }//GEN-LAST:event_jtxfUsuarioMouseDragged
+
+    private void jtxfUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxfUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtxfUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -265,12 +283,13 @@ public Image getIconImage(){
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnIngresar;
     private javax.swing.JButton btnSalir;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel jlbContraseña;
     private javax.swing.JLabel jlbInicio;
     private javax.swing.JLabel jlbMensajes;
     private javax.swing.JLabel jlbUsuario;
-    private javax.swing.JPasswordField jpfContraseña;
-    private javax.swing.JTextField jtfUsuario;
+    private javax.swing.JPasswordField jtxfContraseña;
+    private javax.swing.JTextField jtxfUsuario;
     // End of variables declaration//GEN-END:variables
 }
