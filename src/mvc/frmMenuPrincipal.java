@@ -1,5 +1,9 @@
 package mvc;
 
+import java.awt.Color;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+
 public class frmMenuPrincipal extends javax.swing.JFrame {
 
     
@@ -71,10 +75,16 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
                 .addContainerGap(149, Short.MAX_VALUE))
         );
 
+        jmSucursales.setBackground(new java.awt.Color(32, 182, 184));
         jmSucursales.setBorder(null);
         jmSucursales.setText("Sucursales");
 
         jmiSRegistrar.setText("Registrar");
+        jmiSRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiSRegistrarActionPerformed(evt);
+            }
+        });
         jmSucursales.add(jmiSRegistrar);
 
         jmiSMostrar.setText("Mostrar");
@@ -169,18 +179,30 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jmSalirMouseClicked
 
     private void jmiSMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiSMostrarActionPerformed
-
+        frmMostrarSucursal mSucursal = new frmMostrarSucursal(null);
+        mSucursal.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jmiSMostrarActionPerformed
+
+    private void jmiSRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiSRegistrarActionPerformed
+        // TODO add your handling code here:
+        frmRegistrarSucursal regSuc = new frmRegistrarSucursal();
+        regSuc.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jmiSRegistrarActionPerformed
 
     /**
      * @param args the command line arguments
+     * @throws javax.swing.UnsupportedLookAndFeelException
      */
-    public static void main(String args[]) {
+    public static void main(String args[]) throws UnsupportedLookAndFeelException{
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
+
+    
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -206,6 +228,8 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
             }
         });
     }
+
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
