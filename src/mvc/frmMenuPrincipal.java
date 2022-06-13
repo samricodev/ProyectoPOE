@@ -141,9 +141,19 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         jmCompras.setText("Compras");
 
         jmiCoRegistrar.setText("Registrar");
+        jmiCoRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiCoRegistrarActionPerformed(evt);
+            }
+        });
         jmCompras.add(jmiCoRegistrar);
 
         jmiCoMostrar.setText("Mostrar");
+        jmiCoMostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiCoMostrarActionPerformed(evt);
+            }
+        });
         jmCompras.add(jmiCoMostrar);
 
         jmbMenu.add(jmCompras);
@@ -151,9 +161,19 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         jmClientes.setText("Clientes");
 
         jmiCliRegistrar.setText("Registrar");
+        jmiCliRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiCliRegistrarActionPerformed(evt);
+            }
+        });
         jmClientes.add(jmiCliRegistrar);
 
         jmiCliMostrar.setText("Mostrar");
+        jmiCliMostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiCliMostrarActionPerformed(evt);
+            }
+        });
         jmClientes.add(jmiCliMostrar);
 
         jmbMenu.add(jmClientes);
@@ -161,6 +181,11 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         jmVentas.setText("Ventas");
 
         jmiVRegistrar.setText("Registrar");
+        jmiVRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiVRegistrarActionPerformed(evt);
+            }
+        });
         jmVentas.add(jmiVRegistrar);
 
         jmiMostrar.setText("Mostrar");
@@ -222,7 +247,42 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
 
     private void jmiProRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiProRegistroActionPerformed
         // TODO add your handling code here:
+        frmProveedores proveedores = new frmProveedores();
+        proveedores.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jmiProRegistroActionPerformed
+
+    private void jmiCliRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCliRegistrarActionPerformed
+        // TODO add your handling code here:
+        frmRegistrarClientes clientes = new frmRegistrarClientes();
+        clientes.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jmiCliRegistrarActionPerformed
+
+    private void jmiCliMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCliMostrarActionPerformed
+        // TODO add your handling code here:
+        frmMostrarCliente cliente = new frmMostrarCliente(null); //--------------------------CAMBIAR "NULL"
+        cliente.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jmiCliMostrarActionPerformed
+
+    private void jmiCoRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCoRegistrarActionPerformed
+        // TODO add your handling code here:
+        frmClienteRegistrar compras = new frmClienteRegistrar();
+        compras.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jmiCoRegistrarActionPerformed
+
+    private void jmiVRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiVRegistrarActionPerformed
+        // TODO add your handling code here:
+        frmVentasRegistrar ventas = new frmVentasRegistrar();
+        ventas.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jmiVRegistrarActionPerformed
+
+    private void jmiCoMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCoMostrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jmiCoMostrarActionPerformed
 
     /**
      * @param args the command line arguments
