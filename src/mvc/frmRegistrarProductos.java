@@ -357,8 +357,9 @@ public class frmRegistrarProductos extends javax.swing.JFrame {
         }else{
             while(aux != null){
                 if(jtfId.getText().equals(String.valueOf(aux.getId()))){
-                    //ELIMINANDO CUALQUIER NODO 
-                    anterior.setSiguiente(aux.getSiguiente());
+                    if(anterior !=null){
+                        //ELIMINANDO CUALQUIER NODO 
+                    anterior.setSiguiente(aux.getSiguiente()); 
                 }else{
                     product = aux.getSiguiente();
                 }
@@ -371,6 +372,7 @@ public class frmRegistrarProductos extends javax.swing.JFrame {
         }
         if(!encontrado){
             JOptionPane.showMessageDialog(null, "EL DATO NO HA SIDO ENCONTRADO");
+        }
         }
         jtfContenido.setText(null);
         jtfCosto.setText(null);
