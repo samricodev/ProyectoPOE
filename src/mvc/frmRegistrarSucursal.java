@@ -331,7 +331,27 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-        // TODO add your handling code here:
+        Sucursal aux = suc;
+        int pos = 1;
+        boolean encontrado = false;
+        if(suc == null){
+            System.out.println("La lista esta vacia");
+        } else{
+            while(aux != null){
+                if(jtfId.getText().equals(aux.getId())){
+                    jtfLocalidad.setText(aux.getLocalidad());
+                    jtfCapacidad.setText(String.valueOf(aux.getCapacidad()));
+                    jtfVentas.setText(String.valueOf(aux.getVentas_prom()));
+                    encontrado = true;
+                    break;
+                } 
+                pos++;
+                aux = aux.getSiguiente();
+            }
+            if(!encontrado){
+                System.out.println("El dato no se ha encontrado");
+            }
+        }
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
