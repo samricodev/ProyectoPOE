@@ -9,11 +9,14 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
     Sucursal sucursal;
     Cliente cliente;
     Producto producto;
-    public frmMenuPrincipal(Sucursal suc, Cliente client, Producto product) {
+    Proveedor provers;
+    public frmMenuPrincipal(Sucursal suc, Producto product, Proveedor provs) {
         initComponents();
         sucursal = suc;
-        cliente = client;
+        //cliente = client; (NO HACER CASO)
         producto = product;
+
+        provers = provs;
     }
 
     @SuppressWarnings("unchecked")
@@ -144,6 +147,11 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         jmProveedores.add(jmiProRegistro);
 
         jmiProMostrar.setText("Mostrar");
+        jmiProMostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiProMostrarActionPerformed(evt);
+            }
+        });
         jmProveedores.add(jmiProMostrar);
 
         jmbMenu.add(jmProveedores);
@@ -257,7 +265,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
 
     private void jmiProRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiProRegistroActionPerformed
         // TODO add your handling code here:
-        frmProveedores proveedores = new frmProveedores();
+        frmRegistrarProveedores proveedores = new frmRegistrarProveedores();
         proveedores.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jmiProRegistroActionPerformed
@@ -294,11 +302,19 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jmiCoMostrarActionPerformed
 
+
     private void jmiPOMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiPOMostrarActionPerformed
         frmMostrarProducto view = new frmMostrarProducto(producto);
         view.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jmiPOMostrarActionPerformed
+
+    private void jmiProMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiProMostrarActionPerformed
+        frmMostrarProveedores mp = new frmMostrarProveedores(provers);
+        mp.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jmiProMostrarActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -333,7 +349,6 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmMenuPrincipal(null,null,null).setVisible(true);
             }
         });
     }

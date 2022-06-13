@@ -1,4 +1,3 @@
-
 //Equipo 4
 package mvc;
 
@@ -11,7 +10,6 @@ public class Producto {
     
     private Producto siguiente;
     //CONSTRUCTOR 
-
     public Producto(int id, String nombre, String contenido, int unidades, float costo) {
         this.id = id;
         this.nombre = nombre;

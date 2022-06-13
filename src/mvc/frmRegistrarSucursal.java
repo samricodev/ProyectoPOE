@@ -404,6 +404,15 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                         jcbTipo2.setSelected(true);
                     } else if(aux.getTipo() == 3){
                         jcbTipo3.setSelected(true);
+                    aux.setVentas_prom(Integer.parseInt(jtfCapacidad.getText()));
+                    if(jcbTipo1.isSelected()){
+                        aux.setTipo(1);
+                    }else if(jcbTipo2.isSelected()){
+                        aux.setTipo(2);
+                    }else if(jcbTipo3.isSelected()){
+                        aux.setTipo(3);
+                    } else {
+                        jlbMensaje.setText("NINGUNO OPCION SELECCIONADA");
                     }
                     jlbMensaje.setText("La sucursal con Id " + aux.getId() + " ha sido actualizada");
                     encontrado = true;
@@ -415,9 +424,11 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                 jlbMensaje.setText("La sucursal no se ha encontrado");
             }
         }
+        }
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        
         Sucursal aux = suc;
         Sucursal anteterior = null;
         boolean encontrado = false;
@@ -459,7 +470,6 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         this.jcbTipo1.setSelected(false);
         this.jcbTipo2.setSelected(false);
         this.jcbTipo3.setSelected(false);
-        
         jtfId.setEditable(true);
     }//GEN-LAST:event_btnLimpiarActionPerformed
 

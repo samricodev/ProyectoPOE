@@ -1,22 +1,22 @@
-
 //Equipo 4
 package mvc;
 
 public class Proveedor {
     private int id;
     private String nombre;
-    private int categoria;
+    private String categoria;
     private String productos;
     private float cobro;
+    private Proveedor siguiente;
     
     //Constructor
-
-    public Proveedor(int id, String nombre, int categoria, String productos, float cobro) {
+    public Proveedor(int id, String nombre, String categoria, String productos, float cobro) {
         this.id = id;
         this.nombre = nombre;
         this.categoria = categoria;
         this.productos = productos;
         this.cobro = cobro;
+        this.siguiente = null;
     }
     
     // SET N GET
@@ -37,11 +37,11 @@ public class Proveedor {
         this.nombre = nombre;
     }
 
-    public int getCategoria() {
+    public String getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(int categoria) {
+    public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
 
@@ -60,4 +60,14 @@ public class Proveedor {
     public void setCobro(float cobro) {
         this.cobro = cobro;
     }
+
+    public Proveedor getSiguiente() {
+        return siguiente;
+    }
+
+    public void setSiguiente(Proveedor siguiente) {
+        this.siguiente = siguiente;
+    }
+    
+    
 }
