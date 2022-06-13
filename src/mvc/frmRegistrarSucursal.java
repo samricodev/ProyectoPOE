@@ -8,7 +8,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
 
     Sucursal suc;
     
-    public frmRegistrarSucursal() {
+    public frmRegistrarSucursal(Sucursal suc) {
         initComponents();
         suc = null;
     }
@@ -40,6 +40,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sucursales");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
@@ -278,7 +279,8 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(552, 412));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void bntRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntRegresarActionPerformed
@@ -454,7 +456,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmRegistrarSucursal().setVisible(true);
+                new frmRegistrarSucursal(null).setVisible(true);
             }
         });
     }
