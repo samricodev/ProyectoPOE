@@ -180,7 +180,7 @@ public class frmRegistrarClientes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbnRegresarActionPerformed
-        frmMenuPrincipal back = new frmMenuPrincipal();
+        frmMenuPrincipal back = new frmMenuPrincipal(null);
         back.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jbnRegresarActionPerformed
@@ -230,7 +230,7 @@ public class frmRegistrarClientes extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        frmMenuPrincipal menu = new frmMenuPrincipal();
+        frmMenuPrincipal menu = new frmMenuPrincipal(null);
         menu.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
