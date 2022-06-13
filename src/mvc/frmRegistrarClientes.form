@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="btngTipoCliente">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="btngIncidentes">
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -28,50 +34,68 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="jlbTipo" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jlbNombreCliente" alignment="0" pref="113" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="jlbTipo" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jlbNombreCliente" alignment="0" pref="113" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="rbnMinorista" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="rbnMayorista" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jtxNombre" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
-                                      <Component id="jtxTipo" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                                      <Component id="jtxNombre" min="-2" pref="71" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jlbCliente" min="-2" pref="122" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                                  <Component id="jtxCliente" min="-2" pref="71" max="-2" attributes="0"/>
-                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jlbCliente" min="-2" pref="122" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="jtxCliente" min="-2" pref="71" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jlbCompras" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
+                                  <Component id="jbnRegistrar" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jlbIncidentes" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jtxIncidentes" min="-2" pref="71" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jcbSi" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jcbNo" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <Component id="jtxCompras" min="-2" pref="71" max="-2" attributes="0"/>
+                                  <Component id="jbnRegresar" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" pref="204" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
+                      <Component id="jlbTitulo" min="-2" pref="204" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="172" max="32767" attributes="0"/>
+              <EmptySpace pref="38" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="jlbMensaje" min="-2" pref="199" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+              <Component id="jlbTitulo" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jlbCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jtxCliente" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -84,27 +108,34 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jlbTipo" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jtxTipo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbnMinorista" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbnMayorista" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jlbCompras" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jtxCompras" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jlbIncidentes" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jtxIncidentes" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jcbSi" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jcbNo" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jbnRegistrar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbnRegresar" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="17" max="32767" attributes="0"/>
+              <Component id="jlbMensaje" pref="43" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="jlbTitulo">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="24" style="1"/>
@@ -141,11 +172,61 @@
     </Component>
     <Component class="javax.swing.JTextField" name="jtxNombre">
     </Component>
-    <Component class="javax.swing.JTextField" name="jtxTipo">
-    </Component>
     <Component class="javax.swing.JTextField" name="jtxCompras">
     </Component>
-    <Component class="javax.swing.JTextField" name="jtxIncidentes">
+    <Component class="javax.swing.JRadioButton" name="rbnMinorista">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="btngTipoCliente"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Minorista"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JRadioButton" name="rbnMayorista">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="btngTipoCliente"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Mayorista"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jbnRegistrar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Registrar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbnRegistrarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jbnRegresar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Regresar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbnRegresarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlbMensaje">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="(AREA DE MENSJAES)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="jcbSi">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="btngIncidentes"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Si"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="jcbNo">
+      <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="btngIncidentes"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="No"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
