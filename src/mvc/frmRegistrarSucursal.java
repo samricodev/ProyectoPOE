@@ -235,7 +235,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                                 .addComponent(jtfLocalidad, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -303,12 +303,12 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        setSize(new java.awt.Dimension(571, 412));
+        setSize(new java.awt.Dimension(580, 412));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void bntRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntRegresarActionPerformed
-        frmMenuPrincipal back = new frmMenuPrincipal(suc,null);
+        frmMenuPrincipal back = new frmMenuPrincipal(suc,null,null);
         back.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_bntRegresarActionPerformed
@@ -397,6 +397,13 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                     jtfId.setEditable(false);
                     aux.setLocalidad(jtfLocalidad.getText());
                     aux.setCapacidad(Integer.parseInt(jtfCapacidad.getText()));
+                    aux.setVentas_prom(Float.parseFloat(jtfVentas.getText()));
+                    if(aux.getTipo() == 1){
+                        jcbTipo1.setSelected(true);
+                    } else if(aux.getTipo() == 2){
+                        jcbTipo2.setSelected(true);
+                    } else if(aux.getTipo() == 3){
+                        jcbTipo3.setSelected(true);
                     aux.setVentas_prom(Integer.parseInt(jtfCapacidad.getText()));
                     if(jcbTipo1.isSelected()){
                         aux.setTipo(1);
@@ -417,9 +424,11 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                 jlbMensaje.setText("La sucursal no se ha encontrado");
             }
         }
+        }
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        
         Sucursal aux = suc;
         Sucursal anteterior = null;
         boolean encontrado = false;

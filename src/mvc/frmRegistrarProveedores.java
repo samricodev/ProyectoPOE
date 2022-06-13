@@ -183,9 +183,9 @@ public class frmRegistrarProveedores extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(13, 13, 13)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jlbCategoria)
-                            .addComponent(jrbOpcion1))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jrbOpcion1)
+                            .addComponent(jlbCategoria))
                         .addGap(6, 6, 6)
                         .addComponent(jrbOpcion2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -368,7 +368,7 @@ public class frmRegistrarProveedores extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnEliminarActionPerformed
 
     private void jbtnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnRegresarActionPerformed
-        frmMenuPrincipal mp = new frmMenuPrincipal(null,provs);
+        frmMenuPrincipal mp = new frmMenuPrincipal(null,null,provs);
         mp.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jbtnRegresarActionPerformed
