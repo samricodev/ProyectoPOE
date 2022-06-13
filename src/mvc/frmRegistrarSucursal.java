@@ -6,7 +6,7 @@ import javax.swing.UIManager;
 
 public class frmRegistrarSucursal extends javax.swing.JFrame {
 
-    private Sucursal suc;
+    Sucursal suc;
     
     public frmRegistrarSucursal() {
         initComponents();
@@ -39,6 +39,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         btnEliminar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Sucursales");
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
@@ -93,8 +94,8 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         btnRegistrar.setText("Registrar");
         btnRegistrar.setBorderPainted(false);
         btnRegistrar.setContentAreaFilled(false);
+        btnRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnRegistrar.setFocusPainted(false);
-        btnRegistrar.setOpaque(false);
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarActionPerformed(evt);
@@ -123,6 +124,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         btnBuscar.setText("Buscar");
         btnBuscar.setBorderPainted(false);
         btnBuscar.setContentAreaFilled(false);
+        btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBuscar.setFocusPainted(false);
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,6 +137,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         btnEditar.setText(" Editar");
         btnEditar.setBorderPainted(false);
         btnEditar.setContentAreaFilled(false);
+        btnEditar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEditar.setFocusPainted(false);
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,6 +150,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         btnEliminar.setText("Eliminar");
         btnEliminar.setBorderPainted(false);
         btnEliminar.setContentAreaFilled(false);
+        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEliminar.setFocusPainted(false);
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -278,7 +282,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bntRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntRegresarActionPerformed
-        frmMenuPrincipal back = new frmMenuPrincipal();
+        frmMenuPrincipal back = new frmMenuPrincipal(suc);
         back.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_bntRegresarActionPerformed
@@ -316,10 +320,12 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
             aux.setSiguiente(nueva);
         }
         
-        /*frmMostrarSucursal ver = new frmMostrarSucursal(suc);
-            ver.setVisible(true);
-            this.setVisible(false);
-        */
+        jlbMensaje.setText("Registro hecho");
+        jtfId.setText(null);
+        jtfLocalidad.setText(null);
+        jtfVentas.setText(null);
+        jtfCapacidad.setText(null);
+        btngTipo.clearSelection();
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed

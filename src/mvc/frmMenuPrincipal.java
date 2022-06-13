@@ -6,9 +6,10 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 public class frmMenuPrincipal extends javax.swing.JFrame {
 
-    
-    public frmMenuPrincipal() {
+    Sucursal sucursal;
+    public frmMenuPrincipal(Sucursal suc) {
         initComponents();
+        sucursal = suc;
     }
 
     @SuppressWarnings("unchecked")
@@ -196,7 +197,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
 
     private void jmiSMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiSMostrarActionPerformed
 
-        frmMostrarSucursal mSucursal = new frmMostrarSucursal(null);
+        frmMostrarSucursal mSucursal = new frmMostrarSucursal(sucursal);
         mSucursal.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jmiSMostrarActionPerformed
@@ -248,7 +249,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmMenuPrincipal().setVisible(true);
+                new frmMenuPrincipal(null).setVisible(true);
             }
         });
     }
