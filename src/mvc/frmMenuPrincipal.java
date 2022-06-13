@@ -7,9 +7,13 @@ import javax.swing.UnsupportedLookAndFeelException;
 public class frmMenuPrincipal extends javax.swing.JFrame {
 
     Sucursal sucursal;
-    public frmMenuPrincipal(Sucursal suc) {
+    Cliente cliente;
+    Producto producto;
+    public frmMenuPrincipal(Sucursal suc, Cliente client, Producto product) {
         initComponents();
         sucursal = suc;
+        cliente = client;
+        producto = product;
     }
 
     @SuppressWarnings("unchecked")
@@ -27,7 +31,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         jmiSMostrar = new javax.swing.JMenuItem();
         jmProductos = new javax.swing.JMenu();
         jmiPORegistar = new javax.swing.JMenuItem();
-        jmiPOEditar = new javax.swing.JMenuItem();
+        jmiPOMostrar = new javax.swing.JMenuItem();
         jmProveedores = new javax.swing.JMenu();
         jmiProRegistro = new javax.swing.JMenuItem();
         jmiProMostrar = new javax.swing.JMenuItem();
@@ -119,8 +123,13 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         });
         jmProductos.add(jmiPORegistar);
 
-        jmiPOEditar.setText("Editar");
-        jmProductos.add(jmiPOEditar);
+        jmiPOMostrar.setText("Mostrar");
+        jmiPOMostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiPOMostrarActionPerformed(evt);
+            }
+        });
+        jmProductos.add(jmiPOMostrar);
 
         jmbMenu.add(jmProductos);
 
@@ -241,7 +250,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
 
     private void jmiPORegistarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiPORegistarActionPerformed
         // TODO add your handling code here:
-        frmProductos productos = new frmProductos();
+        frmRegistrarProductos productos = new frmRegistrarProductos(producto);
         productos.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jmiPORegistarActionPerformed
@@ -285,6 +294,12 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jmiCoMostrarActionPerformed
 
+    private void jmiPOMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiPOMostrarActionPerformed
+        frmMostrarProducto view = new frmMostrarProducto(producto);
+        view.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jmiPOMostrarActionPerformed
+
     /**
      * @param args the command line arguments
      * @throws javax.swing.UnsupportedLookAndFeelException
@@ -318,7 +333,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmMenuPrincipal(null).setVisible(true);
+                new frmMenuPrincipal(null,null,null).setVisible(true);
             }
         });
     }
@@ -344,7 +359,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmiCoMostrar;
     private javax.swing.JMenuItem jmiCoRegistrar;
     private javax.swing.JMenuItem jmiMostrar;
-    private javax.swing.JMenuItem jmiPOEditar;
+    private javax.swing.JMenuItem jmiPOMostrar;
     private javax.swing.JMenuItem jmiPORegistar;
     private javax.swing.JMenuItem jmiProMostrar;
     private javax.swing.JMenuItem jmiProRegistro;
