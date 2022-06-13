@@ -126,6 +126,11 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         jmProveedores.setText("Proveedores");
 
         jmiProRegistro.setText("Registro");
+        jmiProRegistro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiProRegistroActionPerformed(evt);
+            }
+        });
         jmProveedores.add(jmiProRegistro);
 
         jmiProMostrar.setText("Mostrar");
@@ -213,6 +218,10 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         productos.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jmiPORegistarActionPerformed
+
+    private void jmiProRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiProRegistroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jmiProRegistroActionPerformed
 
     /**
      * @param args the command line arguments
