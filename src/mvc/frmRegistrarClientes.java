@@ -32,6 +32,7 @@ public class frmRegistrarClientes extends javax.swing.JFrame {
         jlbMensaje = new javax.swing.JLabel();
         jcbSi = new javax.swing.JCheckBox();
         jcbNo = new javax.swing.JCheckBox();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,6 +78,13 @@ public class frmRegistrarClientes extends javax.swing.JFrame {
         btngIncidentes.add(jcbNo);
         jcbNo.setText("No");
 
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -92,13 +100,15 @@ public class frmRegistrarClientes extends javax.swing.JFrame {
                                     .addComponent(jlbNombreCliente, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
+                                        .addGap(54, 54, 54)
+                                        .addComponent(jtxNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
                                         .addGap(18, 18, 18)
                                         .addComponent(rbnMinorista)
                                         .addGap(18, 18, 18)
-                                        .addComponent(rbnMayorista))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(54, 54, 54)
-                                        .addComponent(jtxNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(rbnMayorista)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
+                                        .addComponent(jButton1))))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jlbCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(45, 45, 45)
@@ -119,7 +129,7 @@ public class frmRegistrarClientes extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(124, 124, 124)
                         .addComponent(jlbTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addGap(37, 37, 37))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jlbMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -138,11 +148,16 @@ public class frmRegistrarClientes extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlbNombreCliente)
                     .addComponent(jtxNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlbTipo)
-                    .addComponent(rbnMinorista)
-                    .addComponent(rbnMayorista))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jlbTipo)
+                            .addComponent(rbnMinorista)
+                            .addComponent(rbnMayorista)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jButton1)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlbCompras)
@@ -165,7 +180,7 @@ public class frmRegistrarClientes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbnRegresarActionPerformed
-        frmMenuPrincipal back = new frmMenuPrincipal();
+        frmMenuPrincipal back = new frmMenuPrincipal(null);
         back.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jbnRegresarActionPerformed
@@ -207,11 +222,14 @@ public class frmRegistrarClientes extends javax.swing.JFrame {
             }
             aux.setSiguiente(nuevo);
         }
-        frmMostrarCliente ver = new frmMostrarCliente(client);
-        ver.setVisible(true);
-        this.setVisible(false);
-        
     }//GEN-LAST:event_jbnRegistrarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        frmMenuPrincipal menu = new frmMenuPrincipal(null);
+        menu.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -248,6 +266,7 @@ public class frmRegistrarClientes extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btngIncidentes;
     private javax.swing.ButtonGroup btngTipoCliente;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jbnRegistrar;
     private javax.swing.JButton jbnRegresar;
     private javax.swing.JCheckBox jcbNo;
