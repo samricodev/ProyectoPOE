@@ -200,6 +200,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jmSalirMouseClicked
 
     private void jmiSMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiSMostrarActionPerformed
+
         frmMostrarSucursal mSucursal = new frmMostrarSucursal(null);
         mSucursal.setVisible(true);
         this.setVisible(false);
