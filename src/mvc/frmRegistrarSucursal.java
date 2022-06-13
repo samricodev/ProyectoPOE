@@ -316,10 +316,10 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
             aux.setSiguiente(nueva);
         }
         
-        frmMostrarSucursal ver = new frmMostrarSucursal(suc);
+        /*frmMostrarSucursal ver = new frmMostrarSucursal(suc);
             ver.setVisible(true);
             this.setVisible(false);
-        
+        */
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed

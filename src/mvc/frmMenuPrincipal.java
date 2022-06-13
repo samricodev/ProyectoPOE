@@ -19,6 +19,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jmbMenu = new javax.swing.JMenuBar();
         jmSucursales = new javax.swing.JMenu();
         jmiSRegistrar = new javax.swing.JMenuItem();
@@ -51,28 +52,38 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/vinos.png"))); // NOI18N
 
+        jLabel4.setFont(new java.awt.Font("Yu Gothic UI Semilight", 0, 48)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 204, 204));
+        jLabel4.setText("LICORERIA LA ESTUDIANTIL");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(95, 95, 95)
+                .addGap(91, 91, 91)
                 .addComponent(jLabel2)
                 .addGap(109, 109, 109)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
                 .addComponent(jLabel3)
-                .addGap(105, 105, 105))
+                .addGap(109, 109, 109))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(117, 117, 117)
+                .addComponent(jLabel4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(147, 147, 147)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(73, 73, 73)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2))
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addGap(70, 70, 70))
         );
 
         jmSucursales.setBackground(new java.awt.Color(32, 182, 184));
@@ -100,6 +111,11 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         jmProductos.setText("Productos");
 
         jmiPORegistar.setText("Registrar");
+        jmiPORegistar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiPORegistarActionPerformed(evt);
+            }
+        });
         jmProductos.add(jmiPORegistar);
 
         jmiPOEditar.setText("Editar");
@@ -191,6 +207,13 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jmiSRegistrarActionPerformed
 
+    private void jmiPORegistarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiPORegistarActionPerformed
+        // TODO add your handling code here:
+        frmProductos productos = new frmProductos();
+        productos.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jmiPORegistarActionPerformed
+
     /**
      * @param args the command line arguments
      * @throws javax.swing.UnsupportedLookAndFeelException
@@ -235,6 +258,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenu jmClientes;
     private javax.swing.JMenu jmCompras;
