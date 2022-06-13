@@ -222,10 +222,6 @@ public class frmRegistrarClientes extends javax.swing.JFrame {
             }
             aux.setSiguiente(nuevo);
         }
-        frmMostrarCliente ver = new frmMostrarCliente(client);
-        ver.setVisible(true);
-        this.setVisible(false);
-        
     }//GEN-LAST:event_jbnRegistrarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
