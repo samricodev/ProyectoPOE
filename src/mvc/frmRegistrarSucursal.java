@@ -2,6 +2,7 @@
 package mvc;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
 public class frmRegistrarSucursal extends javax.swing.JFrame {
@@ -404,6 +405,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                         jcbTipo2.setSelected(true);
                     } else if(aux.getTipo() == 3){
                         jcbTipo3.setSelected(true);
+                    }
                     aux.setVentas_prom(Integer.parseInt(jtfCapacidad.getText()));
                     if(jcbTipo1.isSelected()){
                         aux.setTipo(1);
@@ -411,8 +413,6 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                         aux.setTipo(2);
                     }else if(jcbTipo3.isSelected()){
                         aux.setTipo(3);
-                    } else {
-                        jlbMensaje.setText("NINGUNO OPCION SELECCIONADA");
                     }
                     jlbMensaje.setText("La sucursal con Id " + aux.getId() + " ha sido actualizada");
                     encontrado = true;
@@ -420,10 +420,10 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                 }
                 aux = aux.getSiguiente();
             }
-            if(!encontrado){
-                jlbMensaje.setText("La sucursal no se ha encontrado");
-            }
-        }
+                if(!encontrado){
+                    jlbMensaje.setText("La sucursal no se ha encontrado");
+                }
+
         }
     }//GEN-LAST:event_btnEditarActionPerformed
 
