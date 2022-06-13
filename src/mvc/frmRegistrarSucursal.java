@@ -360,6 +360,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+
         Sucursal aux = suc;
         boolean encontrado = false;
         if(suc == null){
@@ -391,7 +392,36 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        // TODO add your handling code here:
+        Sucursal aux = suc;
+        Sucursal anteterior = null;
+        boolean encontrado = false;
+        if (suc == null){
+            jlbMensaje.setText("La lista esta vacia");
+        }else{
+            while(aux != null){
+                if(jtfId.getText().equals(String.valueOf(aux.getId())) ){
+                    if(anteterior != null){
+                        //ELIMINANDO CUALQUIER NODO
+                        anteterior.setSiguiente(aux.getSiguiente());
+                    }else{
+                        suc = aux.getSiguiente();
+                    }
+                    jlbMensaje.setText("DATO ELIMINADO");
+                    encontrado = true;
+                    break;
+                }
+                anteterior = aux;
+                aux = aux.getSiguiente();
+            }
+            if(!encontrado){ 
+                jlbMensaje.setText("El dato no se ha encontrado");
+            }
+        }
+        jtfId.setText(null);
+        jtfLocalidad.setText(null);
+        jtfVentas.setText(null);
+        jtfCapacidad.setText(null);
+        btngTipo.clearSelection();
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     /**
