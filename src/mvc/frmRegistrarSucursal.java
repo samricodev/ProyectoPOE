@@ -300,6 +300,8 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         } else {
             jlbMensaje.setText("NINGUNO OPCION SELECCIONADA");
         }
+        
+        //Pasamos los argumentos 
         Sucursal nueva = new Sucursal(id,localidad,tipo,capacidad,0);
         
         //Validar Listas 
