@@ -63,7 +63,6 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         btngTipo.add(jcbTipo3);
         jcbTipo3.setForeground(new java.awt.Color(0, 204, 255));
         jcbTipo3.setText("Tipo 3 ");
-        jcbTipo3.setEnabled(false);
         jcbTipo3.setFocusPainted(false);
         jcbTipo3.setOpaque(false);
 
