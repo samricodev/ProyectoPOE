@@ -7,9 +7,11 @@ import javax.swing.UnsupportedLookAndFeelException;
 public class frmMenuPrincipal extends javax.swing.JFrame {
 
     Sucursal sucursal;
-    public frmMenuPrincipal(Sucursal suc) {
+    Proveedor provers;
+    public frmMenuPrincipal(Sucursal suc,Proveedor provs) {
         initComponents();
         sucursal = suc;
+        provers = provs;
     }
 
     @SuppressWarnings("unchecked")
@@ -135,6 +137,11 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         jmProveedores.add(jmiProRegistro);
 
         jmiProMostrar.setText("Mostrar");
+        jmiProMostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiProMostrarActionPerformed(evt);
+            }
+        });
         jmProveedores.add(jmiProMostrar);
 
         jmbMenu.add(jmProveedores);
@@ -248,7 +255,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
 
     private void jmiProRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiProRegistroActionPerformed
         // TODO add your handling code here:
-        frmProveedores proveedores = new frmProveedores();
+        frmRegistrarProveedores proveedores = new frmRegistrarProveedores();
         proveedores.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jmiProRegistroActionPerformed
@@ -285,6 +292,12 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jmiCoMostrarActionPerformed
 
+    private void jmiProMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiProMostrarActionPerformed
+        frmMostrarProveedores mp = new frmMostrarProveedores(provers);
+        mp.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jmiProMostrarActionPerformed
+
     /**
      * @param args the command line arguments
      * @throws javax.swing.UnsupportedLookAndFeelException
@@ -318,7 +331,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmMenuPrincipal(null).setVisible(true);
+                new frmMenuPrincipal(null,null).setVisible(true);
             }
         });
     }

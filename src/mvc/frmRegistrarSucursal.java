@@ -308,7 +308,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bntRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntRegresarActionPerformed
-        frmMenuPrincipal back = new frmMenuPrincipal(suc);
+        frmMenuPrincipal back = new frmMenuPrincipal(suc,null);
         back.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_bntRegresarActionPerformed
@@ -398,12 +398,14 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                     aux.setLocalidad(jtfLocalidad.getText());
                     aux.setCapacidad(Integer.parseInt(jtfCapacidad.getText()));
                     aux.setVentas_prom(Integer.parseInt(jtfCapacidad.getText()));
-                    if(aux.getTipo() == 1){
-                        jcbTipo1.setSelected(true);
-                    } else if(aux.getTipo() == 2){
-                        jcbTipo2.setSelected(true);
-                    } else if(aux.getTipo() == 3){
-                        jcbTipo3.setSelected(true);
+                    if(jcbTipo1.isSelected()){
+                        aux.setTipo(1);
+                    }else if(jcbTipo2.isSelected()){
+                        aux.setTipo(2);
+                    }else if(jcbTipo3.isSelected()){
+                        aux.setTipo(3);
+                    } else {
+                        jlbMensaje.setText("NINGUNO OPCION SELECCIONADA");
                     }
                     jlbMensaje.setText("La sucursal con Id " + aux.getId() + " ha sido actualizada");
                     encontrado = true;
@@ -459,7 +461,6 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         this.jcbTipo1.setSelected(false);
         this.jcbTipo2.setSelected(false);
         this.jcbTipo3.setSelected(false);
-        
         jtfId.setEditable(true);
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
