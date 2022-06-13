@@ -2,7 +2,7 @@
 package mvc;
 
 import javax.swing.table.DefaultTableModel;
-
+//
 
 public class frmMostrarCliente extends javax.swing.JFrame {
  

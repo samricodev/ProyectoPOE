@@ -8,7 +8,7 @@ public class Cliente {
     private int compras;
     private boolean incidentes;
     
-    //apuntador
+    //apuntador 
     private Cliente siguiente;
     
     //CONSTRUCTOR

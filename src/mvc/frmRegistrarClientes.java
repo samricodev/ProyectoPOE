@@ -1,4 +1,4 @@
-//lazaro prueba commit
+//lazaro prueba commit 
 package mvc;
 
 public class frmRegistrarClientes extends javax.swing.JFrame {
