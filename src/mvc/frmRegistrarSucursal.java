@@ -292,7 +292,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         String localidad = jtfLocalidad.getText();
         int tipo = 0;
         int capacidad = Integer.parseInt(jtfCapacidad.getText());
-        int ventas_prom = Integer.parseInt(jtfVentas.getText());
+        float ventas_prom = Integer.parseInt(jtfVentas.getText());
         
         //EVALUAR 
         if(jcbTipo1.isSelected()){
@@ -341,6 +341,13 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                     jtfLocalidad.setText(aux.getLocalidad());
                     jtfCapacidad.setText(String.valueOf(aux.getCapacidad()));
                     jtfVentas.setText(String.valueOf(aux.getVentas_prom()));
+                    if(aux.getTipo() == 1){
+                        jcbTipo1.setSelected(true);
+                    } else if(aux.getTipo() == 2){
+                        jcbTipo2.setSelected(true);
+                    } else if(aux.getTipo() == 3){
+                        jcbTipo3.setSelected(true);
+                    }
                     encontrado = true;
                     break;
                 }
@@ -353,7 +360,34 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        // TODO add your handling code here:
+        Sucursal aux = suc;
+        boolean encontrado = false;
+        if(suc == null){
+            jlbMensaje.setText("La lista esta vacia");
+        } else{
+            while(aux != null){
+                if(jtfId.getText().equals(String.valueOf(aux.getId()))){
+                    jtfId.setEditable(false);
+                    aux.setLocalidad(jtfLocalidad.getText());
+                    aux.setCapacidad(Integer.parseInt(jtfCapacidad.getText()));
+                    aux.setVentas_prom(Integer.parseInt(jtfCapacidad.getText()));
+                    if(aux.getTipo() == 1){
+                        jcbTipo1.setSelected(true);
+                    } else if(aux.getTipo() == 2){
+                        jcbTipo2.setSelected(true);
+                    } else if(aux.getTipo() == 3){
+                        jcbTipo3.setSelected(true);
+                    }
+                    jlbMensaje.setText("La sucursal con Id " + aux.getId() + " ha sido actualizada");
+                    encontrado = true;
+                    break;
+                }
+                aux = aux.getSiguiente();
+            }
+            if(!encontrado){
+                jlbMensaje.setText("La sucursal no se ha encontrado");
+            }
+        }
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
