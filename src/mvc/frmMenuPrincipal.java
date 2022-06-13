@@ -234,7 +234,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
 
     private void jmiSRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiSRegistrarActionPerformed
         // TODO add your handling code here:
-        frmRegistrarSucursal regSuc = new frmRegistrarSucursal();
+        frmRegistrarSucursal regSuc = new frmRegistrarSucursal(null);
         regSuc.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jmiSRegistrarActionPerformed

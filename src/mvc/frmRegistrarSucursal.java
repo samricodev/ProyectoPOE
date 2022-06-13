@@ -8,7 +8,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
 
     Sucursal suc;
     
-    public frmRegistrarSucursal() {
+    public frmRegistrarSucursal(Sucursal suc) {
         initComponents();
         suc = null;
     }
@@ -454,7 +454,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmRegistrarSucursal().setVisible(true);
+                new frmRegistrarSucursal(null).setVisible(true);
             }
         });
     }
