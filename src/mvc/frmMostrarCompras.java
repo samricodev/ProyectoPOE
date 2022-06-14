@@ -42,6 +42,7 @@ public class frmMostrarCompras extends javax.swing.JFrame {
         btnRegresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jtTabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -84,7 +85,7 @@ public class frmMostrarCompras extends javax.swing.JFrame {
                 .addContainerGap(40, Short.MAX_VALUE))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(412, 431));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
