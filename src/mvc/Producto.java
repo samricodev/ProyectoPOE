@@ -1,4 +1,3 @@
-
 //Equipo 4
 package mvc;
 
@@ -9,14 +8,16 @@ public class Producto {
     private int unidades;
     private float costo;
     
+    private Producto siguiente;
     //CONSTRUCTOR 
-
     public Producto(int id, String nombre, String contenido, int unidades, float costo) {
         this.id = id;
         this.nombre = nombre;
         this.contenido = contenido;
         this.unidades = unidades;
         this.costo = costo;
+        this.siguiente = siguiente;
+        this.siguiente = null;
     }
     
     //SET N GET 
@@ -60,4 +61,13 @@ public class Producto {
     public void setCosto(float costo) {
         this.costo = costo;
     }   
+
+    public Producto getSiguiente() {
+        return siguiente;
+    }
+
+    public void setSiguiente(Producto siguiente) {
+        this.siguiente = siguiente;
+    }
+    
 }
