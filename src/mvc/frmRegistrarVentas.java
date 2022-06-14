@@ -272,10 +272,10 @@ public class frmRegistrarVentas extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 406, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 428, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(387, 445));
+        setSize(new java.awt.Dimension(387, 467));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

@@ -10,9 +10,14 @@ import javax.swing.JOptionPane;
 public class frmUsuario extends javax.swing.JFrame {
     //Prueba
     
-    
+    Usuario users [] = new Usuario[5];
     public frmUsuario() {        
         initComponents();
+        users[0] = new Usuario("admin","solopersonal");
+        users[1] = new Usuario("admin","solopersonal");
+        users[2] = new Usuario("admin","solopersonal");
+        users[3] = new Usuario("admin","solopersonal");
+        users[4] = new Usuario("admin","solopersonal");
     }
 
     
@@ -200,14 +205,21 @@ public class frmUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalirMouseEntered
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
-        if(jtxfUsuario.getText().equals("admin") && jtxfContraseña.getText().equals("solopersonal")){
-           frmMenuPrincipal frmMenu = new frmMenuPrincipal(null,null,null,null,null,null);
-           frmMenu.setVisible(true);
-           this.setVisible(false);
-
-        } else {
+        boolean acces = false;
+        for(int i = 0; i < users.length; i++){
+            if(jtxfUsuario.getText().equals(users[i].getNombreUsuario()) && jtxfContraseña.getText().equals(users[i].getContrasena())){
+                acces = true;
+            } else {
+                acces = false;
+            }
+        }
+        if(!acces){
             JOptionPane.showMessageDialog(null, "No puedes acceder, Comunicate con tu jefe");
             System.exit(0);
+        } else {
+            frmMenuPrincipal frmMenu = new frmMenuPrincipal(null,null,null,null,null,null);
+            frmMenu.setVisible(true);
+            this.setVisible(false);
         }
     }//GEN-LAST:event_btnIngresarActionPerformed
 
