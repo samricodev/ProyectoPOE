@@ -4,16 +4,13 @@ package mvc;
 public class Cliente {
     private int id;
     private String nombre;
-    private int tipo;
+    private String tipo;
     private int compras;
     private boolean incidentes;
-    
-    //apuntador  
     private Cliente siguiente;
     
     //CONSTRUCTOR
-
-    public Cliente(int id, String nombre, int tipo, int compras, boolean incidentes) {
+    public Cliente(int id, String nombre, String tipo, int compras, boolean incidentes) {
         this.id = id;
         this.nombre = nombre;
         this.tipo = tipo;
@@ -41,11 +38,11 @@ public class Cliente {
         this.nombre = nombre;
     }
  
-    public int getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(int tipo) {
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 
@@ -57,7 +54,7 @@ public class Cliente {
         this.compras = compras;
     }
 
-    public boolean isIncidentes() {
+    public boolean getIncidentes() {
         return incidentes;
     }
 

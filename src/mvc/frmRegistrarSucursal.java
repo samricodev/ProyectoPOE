@@ -309,7 +309,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bntRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntRegresarActionPerformed
-        frmMenuPrincipal back = new frmMenuPrincipal(suc,null,null);
+        frmMenuPrincipal back = new frmMenuPrincipal(suc,null,null,null,null,null);
         back.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_bntRegresarActionPerformed
@@ -399,14 +399,6 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                     aux.setLocalidad(jtfLocalidad.getText());
                     aux.setCapacidad(Integer.parseInt(jtfCapacidad.getText()));
                     aux.setVentas_prom(Float.parseFloat(jtfVentas.getText()));
-                    if(aux.getTipo() == 1){
-                        jcbTipo1.setSelected(true);
-                    } else if(aux.getTipo() == 2){
-                        jcbTipo2.setSelected(true);
-                    } else if(aux.getTipo() == 3){
-                        jcbTipo3.setSelected(true);
-                    }
-                    aux.setVentas_prom(Integer.parseInt(jtfCapacidad.getText()));
                     if(jcbTipo1.isSelected()){
                         aux.setTipo(1);
                     }else if(jcbTipo2.isSelected()){

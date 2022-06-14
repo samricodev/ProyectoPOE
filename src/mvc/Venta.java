@@ -7,6 +7,7 @@ public class Venta {
     private String tipo;
     private float monto;
     private String tipo_pago;
+    private Venta siguiente;
 
     Venta(int id, String titulo, String tipo, float monto, String tipo_pago) {
         this.id = id;
@@ -14,6 +15,7 @@ public class Venta {
         this.tipo = tipo;
         this.monto = monto;
         this.tipo_pago = tipo_pago;
+        this.siguiente = null;
     }
 
     public int getId(){
@@ -54,6 +56,14 @@ public class Venta {
 
     public void setTipo_pago(String tipo_pago){
         this.tipo_pago = tipo_pago;
+    }
+
+    public Venta getSiguiente(){
+        return siguiente;
+    }
+
+    public void setSiguiente(Venta siguiente){
+        this.siguiente = siguiente;
     }
     
     
