@@ -88,7 +88,7 @@ public class frmMostrarProducto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
-        frmMenuPrincipal mp = new frmMenuPrincipal(null,producto,null);
+        frmMenuPrincipal mp = new frmMenuPrincipal(null,producto,null,null,null,null);
         mp.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnRegresarActionPerformed

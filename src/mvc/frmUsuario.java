@@ -201,7 +201,7 @@ public class frmUsuario extends javax.swing.JFrame {
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         if(jtxfUsuario.getText().equals("admin") && jtxfContraseña.getText().equals("solopersonal")){
-           frmMenuPrincipal frmMenu = new frmMenuPrincipal(null,null,null);
+           frmMenuPrincipal frmMenu = new frmMenuPrincipal(null,null,null,null,null,null);
            frmMenu.setVisible(true);
            this.setVisible(false);
 

@@ -93,7 +93,7 @@ public class frmMostrarProveedores extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnRegresarActionPerformed
-        frmMenuPrincipal mp = new frmMenuPrincipal(null,null,provers);
+        frmMenuPrincipal mp = new frmMenuPrincipal(null,null,provers,null,null,null);
         mp.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jbtnRegresarActionPerformed
