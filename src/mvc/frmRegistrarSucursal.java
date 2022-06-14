@@ -408,6 +408,11 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                         aux.setTipo(3);
                     }
                     JOptionPane.showMessageDialog(null,"La sucursal con Id " + aux.getId() + " ha sido actualizada");
+                    jtfId.setText(null);
+                    jtfLocalidad.setText(null);
+                    jtfVentas.setText(null);
+                    jtfCapacidad.setText(null);
+                    btngTipo.clearSelection();
                     encontrado = true;
                     break;
                 }
