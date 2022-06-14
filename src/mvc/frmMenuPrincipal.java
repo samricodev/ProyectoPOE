@@ -1,5 +1,5 @@
 package mvc;
-
+//-------------------este es el bueno----------------
 import java.awt.Color;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
