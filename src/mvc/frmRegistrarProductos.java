@@ -54,6 +54,16 @@ public class frmRegistrarProductos extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 204, 255));
         jLabel1.setText("PRODUCTOS");
 
+        jtfId.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+
+        jtfNombreProducto.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+
+        jtfContenido.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+
+        jtfUnidades.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+
+        jtfCosto.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+
         jlbCosto.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
         jlbCosto.setForeground(new java.awt.Color(0, 204, 255));
         jlbCosto.setText("COSTO:");
@@ -79,6 +89,7 @@ public class frmRegistrarProductos extends javax.swing.JFrame {
         btnRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/agregar.png"))); // NOI18N
         btnRegistrar.setText("Registrar");
         btnRegistrar.setContentAreaFilled(false);
+        btnRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarActionPerformed(evt);
@@ -90,6 +101,7 @@ public class frmRegistrarProductos extends javax.swing.JFrame {
         btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/editar.png"))); // NOI18N
         btnEditar.setText("Editar");
         btnEditar.setContentAreaFilled(false);
+        btnEditar.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarActionPerformed(evt);
@@ -101,6 +113,7 @@ public class frmRegistrarProductos extends javax.swing.JFrame {
         btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/busqueda.png"))); // NOI18N
         btnBuscar.setText("Buscar");
         btnBuscar.setContentAreaFilled(false);
+        btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarActionPerformed(evt);
@@ -112,6 +125,7 @@ public class frmRegistrarProductos extends javax.swing.JFrame {
         btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/basura.png"))); // NOI18N
         btnEliminar.setText("Eliminar");
         btnEliminar.setContentAreaFilled(false);
+        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarActionPerformed(evt);
@@ -123,6 +137,7 @@ public class frmRegistrarProductos extends javax.swing.JFrame {
         btnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/regreso (2).png"))); // NOI18N
         btnRegresar.setText("Registrar");
         btnRegresar.setContentAreaFilled(false);
+        btnRegresar.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         btnRegresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegresarActionPerformed(evt);
@@ -136,7 +151,7 @@ public class frmRegistrarProductos extends javax.swing.JFrame {
         btnLimpiar.setText(" Limpiar");
         btnLimpiar.setBorderPainted(false);
         btnLimpiar.setContentAreaFilled(false);
-        btnLimpiar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnLimpiar.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         btnLimpiar.setFocusPainted(false);
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -2,12 +2,11 @@
 package mvc;
 
 public class Usuario {
-    private String nombreUsuario ;
+    private String nombreUsuario;
     private String contrasena;
     
     //CONSTRUCTOR
-
-    public Usuario(String nombreUsuario, String contrasena) {
+    Usuario(String nombreUsuario, String contrasena) {
         this.nombreUsuario = nombreUsuario;
         this.contrasena = contrasena;
     }

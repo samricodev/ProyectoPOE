@@ -8,16 +8,14 @@ import javax.swing.JOptionPane;
 
 
 public class frmUsuario extends javax.swing.JFrame {
-    //Prueba
-    
-    Usuario users [] = new Usuario[5];
-    public frmUsuario() {        
+    Usuario users [] = new Usuario[5];;
+    public frmUsuario() {         
         initComponents();
         users[0] = new Usuario("admin","solopersonal");
-        users[1] = new Usuario("admin","solopersonal");
-        users[2] = new Usuario("admin","solopersonal");
-        users[3] = new Usuario("admin","solopersonal");
-        users[4] = new Usuario("admin","solopersonal");
+        users[1] = new Usuario("root","default");
+        users[2] = new Usuario("mr","robot");
+        users[3] = new Usuario("sam","sepiol");
+        users[4] = new Usuario("invitado","inv");
         Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/user-.png"));
         setIconImage(icon);
     }
@@ -85,6 +83,7 @@ public class frmUsuario extends javax.swing.JFrame {
         btnIngresar.setText("Ingresar");
         btnIngresar.setBorder(null);
         btnIngresar.setContentAreaFilled(false);
+        btnIngresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnIngresar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnIngresarMouseEntered(evt);
@@ -104,6 +103,7 @@ public class frmUsuario extends javax.swing.JFrame {
         btnSalir.setText("Salir");
         btnSalir.setBorder(null);
         btnSalir.setContentAreaFilled(false);
+        btnSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSalir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnSalirMouseEntered(evt);
@@ -211,6 +211,7 @@ public class frmUsuario extends javax.swing.JFrame {
         for(int i = 0; i < users.length; i++){
             if(jtxfUsuario.getText().equals(users[i].getNombreUsuario()) && jtxfContraseña.getText().equals(users[i].getContrasena())){
                 acces = true;
+                break;
             } else {
                 acces = false;
             }

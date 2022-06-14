@@ -74,6 +74,7 @@ public class frmRegistrarProveedores extends javax.swing.JFrame {
         jbtnRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/agregar.png"))); // NOI18N
         jbtnRegistrar.setText("Registrar");
         jbtnRegistrar.setContentAreaFilled(false);
+        jbtnRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbtnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnRegistrarActionPerformed(evt);
@@ -87,6 +88,7 @@ public class frmRegistrarProveedores extends javax.swing.JFrame {
         jbtnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/busqueda.png"))); // NOI18N
         jbtnBuscar.setText("Buscar");
         jbtnBuscar.setContentAreaFilled(false);
+        jbtnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbtnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnBuscarActionPerformed(evt);
@@ -100,6 +102,7 @@ public class frmRegistrarProveedores extends javax.swing.JFrame {
         jbtnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/editar.png"))); // NOI18N
         jbtnEditar.setText("Editar");
         jbtnEditar.setContentAreaFilled(false);
+        jbtnEditar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbtnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnEditarActionPerformed(evt);
@@ -113,6 +116,7 @@ public class frmRegistrarProveedores extends javax.swing.JFrame {
         jbtnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/basura.png"))); // NOI18N
         jbtnEliminar.setText("Eliminar");
         jbtnEliminar.setContentAreaFilled(false);
+        jbtnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbtnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnEliminarActionPerformed(evt);
@@ -123,6 +127,7 @@ public class frmRegistrarProveedores extends javax.swing.JFrame {
         jbtnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/escoba.png"))); // NOI18N
         jbtnLimpiar.setText("Limpiar");
         jbtnLimpiar.setContentAreaFilled(false);
+        jbtnLimpiar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbtnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnLimpiarActionPerformed(evt);
@@ -133,6 +138,7 @@ public class frmRegistrarProveedores extends javax.swing.JFrame {
         jbtnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/regreso (2).png"))); // NOI18N
         jbtnRegresar.setText("Regresar");
         jbtnRegresar.setContentAreaFilled(false);
+        jbtnRegresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbtnRegresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnRegresarActionPerformed(evt);

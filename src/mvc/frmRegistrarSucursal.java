@@ -61,6 +61,10 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         jlbLoicalidad.setForeground(new java.awt.Color(0, 204, 255));
         jlbLoicalidad.setText("LOCALIDAD");
 
+        jtfId.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+
+        jtfLocalidad.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+
         jcbTipo2.setBackground(new java.awt.Color(204, 204, 255));
         btngTipo.add(jcbTipo2);
         jcbTipo2.setForeground(new java.awt.Color(0, 204, 255));
@@ -89,6 +93,10 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         jlbCapacidad.setForeground(new java.awt.Color(0, 204, 255));
         jlbCapacidad.setText("CAPACIDAD");
 
+        jtfCapacidad.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+
+        jtfVentas.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+
         jlbVentas.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
         jlbVentas.setForeground(new java.awt.Color(0, 204, 255));
         jlbVentas.setText("VENTAS");
@@ -98,7 +106,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         btnRegistrar.setText("Registrar");
         btnRegistrar.setBorderPainted(false);
         btnRegistrar.setContentAreaFilled(false);
-        btnRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnRegistrar.setFocusPainted(false);
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,6 +118,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         bntRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/regreso (2).png"))); // NOI18N
         bntRegresar.setText("Regresar");
         bntRegresar.setContentAreaFilled(false);
+        bntRegresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bntRegresar.setFocusPainted(false);
         bntRegresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,7 +137,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         btnBuscar.setText("Buscar");
         btnBuscar.setBorderPainted(false);
         btnBuscar.setContentAreaFilled(false);
-        btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBuscar.setFocusPainted(false);
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,7 +150,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         btnEditar.setText(" Editar");
         btnEditar.setBorderPainted(false);
         btnEditar.setContentAreaFilled(false);
-        btnEditar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnEditar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEditar.setFocusPainted(false);
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,7 +163,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         btnEliminar.setText("Eliminar");
         btnEliminar.setBorderPainted(false);
         btnEliminar.setContentAreaFilled(false);
-        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEliminar.setFocusPainted(false);
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,7 +176,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         btnLimpiar.setText(" Limpiar");
         btnLimpiar.setBorderPainted(false);
         btnLimpiar.setContentAreaFilled(false);
-        btnLimpiar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnLimpiar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLimpiar.setFocusPainted(false);
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
