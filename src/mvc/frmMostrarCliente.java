@@ -45,6 +45,7 @@ public class frmMostrarCliente extends javax.swing.JFrame {
         btnRegresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jtTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -86,7 +87,8 @@ public class frmMostrarCliente extends javax.swing.JFrame {
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(412, 374));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
