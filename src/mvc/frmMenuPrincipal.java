@@ -293,7 +293,9 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jmiCliMostrarActionPerformed
 
     private void jmiCoRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCoRegistrarActionPerformed
-        // TODO add your handling code here:
+        frmRegistrarCompras Rcompras = new frmRegistrarCompras(compras);
+        Rcompras.setVisible(true);
+        this.setVisible(false);
         
     }//GEN-LAST:event_jmiCoRegistrarActionPerformed
 
@@ -305,7 +307,10 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jmiVRegistrarActionPerformed
 
     private void jmiCoMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCoMostrarActionPerformed
-        // TODO add your handling code here:
+         frmMostrarCompras view = new frmMostrarCompras(compras);
+         view.setVisible(true);
+         this.setVisible(false);
+         
     }//GEN-LAST:event_jmiCoMostrarActionPerformed
 
 

@@ -315,7 +315,7 @@ public class frmRegistrarProveedores extends javax.swing.JFrame {
                     } else if(jrbOpcion3.isSelected()){
                         aux.setCategoria("Premium");
                     }
-                        JOptionPane.showMessageDialog(null, "Proveedor con id " + aux.getId() + "ha sido actualizado");
+                        JOptionPane.showMessageDialog(null, "Proveedor con id " + aux.getId() + " ha sido actualizado");
                         jtfId.setEditable(true);
                         jtfId.setText(null);
                         jtfNombre.setText(null);
