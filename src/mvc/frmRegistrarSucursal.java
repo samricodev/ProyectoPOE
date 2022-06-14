@@ -47,6 +47,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setEnabled(false);
 
         jlbId.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
         jlbId.setForeground(new java.awt.Color(0, 204, 255));
@@ -271,7 +272,8 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                                     .addComponent(jlbVentas)
                                     .addComponent(jtfVentas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(79, 79, 79)))
-                        .addGap(34, 34, 34))))
+                        .addGap(34, 34, 34)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -282,15 +284,15 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 378, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(592, 408));
+        setSize(new java.awt.Dimension(592, 417));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void bntRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntRegresarActionPerformed
-        frmMenuPrincipal back = new frmMenuPrincipal(suc,null,null);
+        frmMenuPrincipal back = new frmMenuPrincipal(suc,null,null,null,null,null);
         back.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_bntRegresarActionPerformed
@@ -310,9 +312,9 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         }else if(jcbTipo3.isSelected()){
             tipo = 3;
         } else {
-           // jlbMensaje.setForeground(Color.orange);
-            //jlbMensaje.setText("NINGUNO OPCION SELECCIONADA");
-            JOptionPane.showMessageDialog(null, "INGRESE TODA LA INFORMACION");
+
+            JOptionPane.showMessageDialog(null, "NINGUNO OPCION SELECCIONADA");
+
         }
         
         //Pasamos los argumentos 
@@ -345,9 +347,11 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         Sucursal aux = suc;
         boolean encontrado = false;
         if(suc == null){
+
 //            jlbMensaje.setForeground(Color.orange);
   //          jlbMensaje.setText("La lista esta vacia");
                JOptionPane.showMessageDialog(null, "SUCURSAL NO LOCALIZADA");
+
         } else{
             while(aux != null){
                 if(jtfId.getText().equals(String.valueOf(aux.getId()))){
@@ -367,9 +371,11 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                 aux = aux.getSiguiente();
             }
             if(!encontrado){
+
 //                jlbMensaje.setForeground(Color.orange);
   //              jlbMensaje.setText("El dato no se ha encontrado");
                   JOptionPane.showMessageDialog(null, "SUCURSAL NO LOCALIZADA");
+
             }
         }
     }//GEN-LAST:event_btnBuscarActionPerformed
@@ -379,8 +385,10 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         Sucursal aux = suc;
         boolean encontrado = false;
         if(suc == null){
-//            jlbMensaje.setText("La lista esta vacia");
-               JOptionPane.showMessageDialog(null, "SUCURSAL NO LOCALIZADA");
+
+
+            JOptionPane.showMessageDialog(null, "LISTA VACIA");
+
         } else{
             while(aux != null){
                 if(jtfId.getText().equals(String.valueOf(aux.getId()))){
@@ -388,14 +396,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                     aux.setLocalidad(jtfLocalidad.getText());
                     aux.setCapacidad(Integer.parseInt(jtfCapacidad.getText()));
                     aux.setVentas_prom(Float.parseFloat(jtfVentas.getText()));
-                    if(aux.getTipo() == 1){
-                        jcbTipo1.setSelected(true);
-                    } else if(aux.getTipo() == 2){
-                        jcbTipo2.setSelected(true);
-                    } else if(aux.getTipo() == 3){
-                        jcbTipo3.setSelected(true);
-                    }
-                    aux.setVentas_prom(Integer.parseInt(jtfCapacidad.getText()));
+                    
                     if(jcbTipo1.isSelected()){
                         aux.setTipo(1);
                     }else if(jcbTipo2.isSelected()){
@@ -403,17 +404,23 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                     }else if(jcbTipo3.isSelected()){
                         aux.setTipo(3);
                     }
-                     JOptionPane.showMessageDialog(null, "La sucursal con Id " + aux.getId() + " ha sido actualizada");
-  //                  jlbMensaje.setText();
+
+                    JOptionPane.showMessageDialog(null,"La sucursal con Id " + aux.getId() + " ha sido actualizada");
+                    jtfId.setText(null);
+                    jtfLocalidad.setText(null);
+                    jtfVentas.setText(null);
+                    jtfCapacidad.setText(null);
+                    btngTipo.clearSelection();
+
                     encontrado = true;
                     break;
                 }
                 aux = aux.getSiguiente();
             }
                 if(!encontrado){
-//                    jlbMensaje.setForeground(Color.orange);
-  //                  jlbMensaje.setText("La sucursal no se ha encontrado");
+
                        JOptionPane.showMessageDialog(null, "SUCURSAL NO LOCALIZADA");
+
                 }
 
         }
@@ -425,9 +432,9 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         Sucursal anteterior = null;
         boolean encontrado = false;
         if (suc == null){
-//            jlbMensaje.setForeground(Color.orange);
-  //          jlbMensaje.setText("La lista esta vacia");
-              JOptionPane.showMessageDialog(null, "SUCURSAL NO LOCALIZADA");
+
+            JOptionPane.showMessageDialog(null, "LISTA VACIA");
+
         }else{
             while(aux != null){
                 if(jtfId.getText().equals(String.valueOf(aux.getId())) ){
@@ -437,8 +444,9 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                     }else{
                         suc = aux.getSiguiente();
                     }
-//                    jlbMensaje.setText("DATO ELIMINADO");
+
                        JOptionPane.showMessageDialog(null, "LA SUCURSAL HA SIDO ELIMINADA CORRECTAMENTE.");
+
                     encontrado = true;
                     break;
                 }
@@ -446,9 +454,9 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                 aux = aux.getSiguiente();
             }
             if(!encontrado){ 
-//                jlbMensaje.setForeground(Color.orange);
-  //              jlbMensaje.setText("El dato no se ha encontrado");
+
                   JOptionPane.showMessageDialog(null, "SUCURSAL NO LOCALIZADA");
+
             }
         }
         jtfId.setText(null);

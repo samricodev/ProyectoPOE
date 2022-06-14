@@ -127,7 +127,7 @@ public class frmMostrarSucursal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnRegresarActionPerformed
-        frmMenuPrincipal mp = new frmMenuPrincipal(sucursal,null,null);
+        frmMenuPrincipal mp = new frmMenuPrincipal(sucursal,null,null,null,null,null);
         mp.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jbtnRegresarActionPerformed
