@@ -13,6 +13,9 @@
               <Border info="null"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Sucursales"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jmiSRegistrar">
@@ -36,6 +39,9 @@
         <Menu class="javax.swing.JMenu" name="jmProductos">
           <Properties>
             <Property name="text" type="java.lang.String" value="Productos"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jmiPORegistar">
@@ -59,6 +65,9 @@
         <Menu class="javax.swing.JMenu" name="jmProveedores">
           <Properties>
             <Property name="text" type="java.lang.String" value="Proveedores"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jmiProRegistro">
@@ -82,6 +91,9 @@
         <Menu class="javax.swing.JMenu" name="jmCompras">
           <Properties>
             <Property name="text" type="java.lang.String" value="Compras"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jmiCoRegistrar">
@@ -105,6 +117,9 @@
         <Menu class="javax.swing.JMenu" name="jmClientes">
           <Properties>
             <Property name="text" type="java.lang.String" value="Clientes"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jmiCliRegistrar">
@@ -128,6 +143,9 @@
         <Menu class="javax.swing.JMenu" name="jmVentas">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ventas"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jmiVRegistrar">
@@ -151,6 +169,9 @@
         <Menu class="javax.swing.JMenu" name="jmSalir">
           <Properties>
             <Property name="text" type="java.lang.String" value="Salir"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jmSalirMouseClicked"/>
