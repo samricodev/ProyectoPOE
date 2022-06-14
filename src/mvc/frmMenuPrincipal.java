@@ -104,6 +104,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         jmSucursales.setBackground(new java.awt.Color(32, 182, 184));
         jmSucursales.setBorder(null);
         jmSucursales.setText("Sucursales");
+        jmSucursales.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jmiSRegistrar.setText("Registrar");
         jmiSRegistrar.addActionListener(new java.awt.event.ActionListener() {
@@ -124,6 +125,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         jmbMenu.add(jmSucursales);
 
         jmProductos.setText("Productos");
+        jmProductos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jmiPORegistar.setText("Registrar");
         jmiPORegistar.addActionListener(new java.awt.event.ActionListener() {
@@ -144,6 +146,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         jmbMenu.add(jmProductos);
 
         jmProveedores.setText("Proveedores");
+        jmProveedores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jmiProRegistro.setText("Registro");
         jmiProRegistro.addActionListener(new java.awt.event.ActionListener() {
@@ -164,6 +167,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         jmbMenu.add(jmProveedores);
 
         jmCompras.setText("Compras");
+        jmCompras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jmiCoRegistrar.setText("Registrar");
         jmiCoRegistrar.addActionListener(new java.awt.event.ActionListener() {
@@ -184,6 +188,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         jmbMenu.add(jmCompras);
 
         jmClientes.setText("Clientes");
+        jmClientes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jmiCliRegistrar.setText("Registrar");
         jmiCliRegistrar.addActionListener(new java.awt.event.ActionListener() {
@@ -204,6 +209,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         jmbMenu.add(jmClientes);
 
         jmVentas.setText("Ventas");
+        jmVentas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jmiVRegistrar.setText("Registrar");
         jmiVRegistrar.addActionListener(new java.awt.event.ActionListener() {
@@ -224,6 +230,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         jmbMenu.add(jmVentas);
 
         jmSalir.setText("Salir");
+        jmSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jmSalir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jmSalirMouseClicked(evt);

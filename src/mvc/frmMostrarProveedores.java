@@ -75,6 +75,7 @@ public class frmMostrarProveedores extends javax.swing.JFrame {
         jbtnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/regreso (2).png"))); // NOI18N
         jbtnRegresar.setText("Regresar");
         jbtnRegresar.setContentAreaFilled(false);
+        jbtnRegresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbtnRegresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnRegresarActionPerformed(evt);

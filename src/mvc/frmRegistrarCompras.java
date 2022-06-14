@@ -50,6 +50,7 @@ public class frmRegistrarCompras extends javax.swing.JFrame {
         btnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/regreso (2).png"))); // NOI18N
         btnRegresar.setText("Regresar");
         btnRegresar.setContentAreaFilled(false);
+        btnRegresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnRegresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegresarActionPerformed(evt);
@@ -73,6 +74,7 @@ public class frmRegistrarCompras extends javax.swing.JFrame {
         btnRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/agregar.png"))); // NOI18N
         btnRegistrar.setText("Registrar");
         btnRegistrar.setContentAreaFilled(false);
+        btnRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarActionPerformed(evt);
@@ -86,6 +88,7 @@ public class frmRegistrarCompras extends javax.swing.JFrame {
         btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/busqueda.png"))); // NOI18N
         btnBuscar.setText("Buscar");
         btnBuscar.setContentAreaFilled(false);
+        btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarActionPerformed(evt);
@@ -99,6 +102,7 @@ public class frmRegistrarCompras extends javax.swing.JFrame {
         btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/escoba.png"))); // NOI18N
         btnLimpiar.setText("Limpiar");
         btnLimpiar.setContentAreaFilled(false);
+        btnLimpiar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLimpiarActionPerformed(evt);
@@ -112,6 +116,7 @@ public class frmRegistrarCompras extends javax.swing.JFrame {
         btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/basura.png"))); // NOI18N
         btnEliminar.setText("Eliminar");
         btnEliminar.setContentAreaFilled(false);
+        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarActionPerformed(evt);
@@ -125,6 +130,7 @@ public class frmRegistrarCompras extends javax.swing.JFrame {
         btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/editar.png"))); // NOI18N
         btnEditar.setText("Editar");
         btnEditar.setContentAreaFilled(false);
+        btnEditar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarActionPerformed(evt);
@@ -185,7 +191,6 @@ public class frmRegistrarCompras extends javax.swing.JFrame {
                                     .addComponent(btnRegresar)
                                     .addGap(244, 244, 244))))
                         .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnRegistrar, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)

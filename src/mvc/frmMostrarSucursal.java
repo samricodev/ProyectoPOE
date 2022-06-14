@@ -70,6 +70,7 @@ public class frmMostrarSucursal extends javax.swing.JFrame {
         jbtnRegresar.setText("Regresar");
         jbtnRegresar.setBorderPainted(false);
         jbtnRegresar.setContentAreaFilled(false);
+        jbtnRegresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbtnRegresar.setFocusPainted(false);
         jbtnRegresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
