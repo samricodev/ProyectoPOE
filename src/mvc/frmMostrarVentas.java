@@ -1,6 +1,8 @@
 
 package mvc;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.table.DefaultTableModel;
 
 public class frmMostrarVentas extends javax.swing.JFrame {
@@ -8,6 +10,8 @@ public class frmMostrarVentas extends javax.swing.JFrame {
     Venta ventas;
     public frmMostrarVentas(Venta vent) {
         initComponents();
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/ventas-.png"));
+        setIconImage(icon);
         ventas = vent;
         DefaultTableModel modelo = new DefaultTableModel();
         String cabecera [] = {"Id" , "Titulo" , "Tipo Venta" , "Monto" , "Tipo Pago"};

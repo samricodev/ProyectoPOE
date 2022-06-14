@@ -1,6 +1,8 @@
 
 package mvc;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
 public class frmRegistrarVentas extends javax.swing.JFrame {
@@ -8,6 +10,8 @@ public class frmRegistrarVentas extends javax.swing.JFrame {
     Venta ventas;
     public frmRegistrarVentas() {
         initComponents();
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/ventas-.png"));
+        setIconImage(icon);
     }
 
     /**

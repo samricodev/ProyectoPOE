@@ -2,6 +2,8 @@
 package mvc;
 
 import java.awt.Color;
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
@@ -11,6 +13,8 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
     
     public frmRegistrarSucursal(Sucursal suc) {
         initComponents();
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/mercado-.png"));
+        setIconImage(icon);
         suc = null;
     }
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

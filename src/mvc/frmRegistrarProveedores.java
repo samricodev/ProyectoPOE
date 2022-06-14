@@ -1,6 +1,8 @@
 
 package mvc;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
 public class frmRegistrarProveedores extends javax.swing.JFrame {
@@ -8,6 +10,8 @@ public class frmRegistrarProveedores extends javax.swing.JFrame {
    Proveedor provs;
     public frmRegistrarProveedores() {
         initComponents();
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/car-.png"));
+        setIconImage(icon);
         this.setLocationRelativeTo(null);
     }
 

@@ -1,5 +1,7 @@
 
 package mvc;
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JOptionPane;
 public class frmMostrarProducto extends javax.swing.JFrame {
@@ -8,6 +10,8 @@ public class frmMostrarProducto extends javax.swing.JFrame {
     Producto producto;
     public frmMostrarProducto( Producto product) {
         initComponents();
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/licor-de-cafe.png"));
+        setIconImage(icon);
         this.setLocationRelativeTo(null);
         
         DefaultTableModel modelo = new DefaultTableModel();

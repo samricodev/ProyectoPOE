@@ -18,6 +18,8 @@ public class frmUsuario extends javax.swing.JFrame {
         users[2] = new Usuario("admin","solopersonal");
         users[3] = new Usuario("admin","solopersonal");
         users[4] = new Usuario("admin","solopersonal");
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/user-.png"));
+        setIconImage(icon);
     }
 
     

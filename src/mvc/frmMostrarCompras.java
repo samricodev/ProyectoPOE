@@ -1,5 +1,7 @@
 
 package mvc;
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -9,6 +11,8 @@ public class frmMostrarCompras extends javax.swing.JFrame {
    Compra compras;
     public frmMostrarCompras(Compra comp) {
         initComponents();
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/compras-.png"));
+        setIconImage(icon);
         
         DefaultTableModel modelo = new DefaultTableModel();
         String cabecera [] = {"Id" , "Titulo" , "Tipo de compra" , "Monto" , "Tipo de pago"};

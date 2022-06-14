@@ -2,6 +2,8 @@
 
 package mvc;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
 public class frmRegistrarProductos extends javax.swing.JFrame {
@@ -10,6 +12,8 @@ public class frmRegistrarProductos extends javax.swing.JFrame {
 
     public frmRegistrarProductos(Producto product) {
         initComponents();
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/licor-de-cafe.png"));
+        setIconImage(icon);
         this.setLocationRelativeTo(null);
         product = null;
     }

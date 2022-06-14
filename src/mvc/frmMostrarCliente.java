@@ -1,6 +1,8 @@
 //Lazaro(prueba commit)
 package mvc;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.table.DefaultTableModel;
 // 
 
@@ -10,6 +12,8 @@ public class frmMostrarCliente extends javax.swing.JFrame {
     
     public frmMostrarCliente(Cliente client) {
         initComponents();
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/customer-.png"));
+        setIconImage(icon);
         DefaultTableModel modelo = new DefaultTableModel();
         String cabecera[] = {"Id" , "Nombre" , "Tipo de cliente" , "Compras" , "Incidentes"};
         modelo.setColumnIdentifiers(cabecera);
