@@ -50,6 +50,7 @@ public class frmMostrarProducto extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Mostrar Productos");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));

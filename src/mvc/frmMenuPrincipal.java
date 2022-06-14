@@ -57,6 +57,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         jmSalir = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Menú Inicio");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));

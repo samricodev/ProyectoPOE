@@ -52,6 +52,7 @@ public class frmMostrarCompras extends javax.swing.JFrame {
         jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Mostrar Compras");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));

@@ -3,6 +3,7 @@ package mvc;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 // 
 
@@ -23,7 +24,7 @@ public class frmMostrarCliente extends javax.swing.JFrame {
         //Mostrar
         Cliente aux = client;
         if(client == null){
-            System.out.println("La lista esta vacia");
+            JOptionPane.showMessageDialog(null,"La lista esta vacia");
         }else{
             while (aux != null){            
                 arreglo[0] = aux.getId();
@@ -52,6 +53,7 @@ public class frmMostrarCliente extends javax.swing.JFrame {
         jlbTitulo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Mostrar Clientes");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));

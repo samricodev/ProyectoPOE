@@ -42,6 +42,7 @@ public class frmRegistrarProductos extends javax.swing.JFrame {
         btnLimpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Productos");
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setEnabled(false);

@@ -3,6 +3,7 @@ package mvc;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class frmMostrarVentas extends javax.swing.JFrame {
@@ -20,7 +21,7 @@ public class frmMostrarVentas extends javax.swing.JFrame {
         //MOSTRAR 
         Venta aux = ventas;
         if(ventas == null){
-            System.out.println("La lista esta vacia");
+            JOptionPane.showMessageDialog(null,"La lista esta vacia");
         }else{
             while(aux != null){
                 datos[0] = aux.getId();
