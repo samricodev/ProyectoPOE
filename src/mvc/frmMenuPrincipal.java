@@ -1,6 +1,8 @@
 package mvc;
 //-------------------este es el bueno----------------
 import java.awt.Color;
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -14,6 +16,8 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
     Venta ventas;
     public frmMenuPrincipal(Sucursal suc, Producto product, Proveedor provs,Compra comp,Venta vents,Cliente cli) {
         initComponents();
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/mercado-.png"));
+        setIconImage(icon);
         sucursal = suc;
         clientes = cli; 
         producto = product;

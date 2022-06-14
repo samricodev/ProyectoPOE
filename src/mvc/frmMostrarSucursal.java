@@ -1,5 +1,7 @@
 
 package mvc;
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.table.DefaultTableModel;
 
 public class frmMostrarSucursal extends javax.swing.JFrame {
@@ -9,6 +11,8 @@ public class frmMostrarSucursal extends javax.swing.JFrame {
     
     public frmMostrarSucursal( Sucursal suc) {
         initComponents();
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/mercado-.png"));
+        setIconImage(icon);
         
         DefaultTableModel modelo = new DefaultTableModel();
         String cabecera [] = {"Id" , "Localidad" , "Tipo" , "Capacidad" , "Ventas"};

@@ -1,6 +1,8 @@
 
 package mvc;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.table.DefaultTableModel;
 
 public class frmMostrarProveedores extends javax.swing.JFrame {
@@ -8,6 +10,8 @@ public class frmMostrarProveedores extends javax.swing.JFrame {
     Proveedor provers;
     public frmMostrarProveedores(Proveedor provs) {
         initComponents();
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/car-.png"));
+        setIconImage(icon);
         provers = provs;
         DefaultTableModel modelo = new DefaultTableModel();
         String cabecera [] = {"Id" , "Nombre" , "Categoria" , "Producto" , "Cobro"};
