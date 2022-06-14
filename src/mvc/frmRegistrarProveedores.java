@@ -368,7 +368,7 @@ public class frmRegistrarProveedores extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnEliminarActionPerformed
 
     private void jbtnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnRegresarActionPerformed
-        frmMenuPrincipal mp = new frmMenuPrincipal(null,null,provs,null);
+        frmMenuPrincipal mp = new frmMenuPrincipal(null,null,provs,null,null,null);
         mp.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jbtnRegresarActionPerformed

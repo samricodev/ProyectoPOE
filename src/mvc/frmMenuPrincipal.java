@@ -7,18 +7,19 @@ import javax.swing.UnsupportedLookAndFeelException;
 public class frmMenuPrincipal extends javax.swing.JFrame {
 
     Sucursal sucursal;
-    Cliente cliente;
+    Cliente clientes;
     Producto producto;
     Proveedor provers;
-    Compra shop;
-    public frmMenuPrincipal(Sucursal suc, Producto product, Proveedor provs, Compra comp ) {
+    Compra compras;
+    Venta ventas;
+    public frmMenuPrincipal(Sucursal suc, Producto product, Proveedor provs,Compra comp,Venta vents,Cliente cli) {
         initComponents();
         sucursal = suc;
-        //cliente = client; (NO HACER CASO)
+        clientes = cli; 
         producto = product;
         provers = provs;
-        shop = comp;
-        
+        ventas = vents;
+        compras = comp;
     }
 
     @SuppressWarnings("unchecked")
@@ -209,6 +210,11 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         jmVentas.add(jmiVRegistrar);
 
         jmiMostrar.setText("Mostrar");
+        jmiMostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiMostrarActionPerformed(evt);
+            }
+        });
         jmVentas.add(jmiMostrar);
 
         jmbMenu.add(jmVentas);
@@ -281,14 +287,14 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
 
     private void jmiCliMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCliMostrarActionPerformed
         // TODO add your handling code here:
-        frmMostrarCliente cliente = new frmMostrarCliente(null); //--------------------------CAMBIAR "NULL"
+        frmMostrarCliente cliente = new frmMostrarCliente(clientes); 
         cliente.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jmiCliMostrarActionPerformed
 
     private void jmiCoRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCoRegistrarActionPerformed
-        frmRegistrarCompras compras = new frmRegistrarCompras(shop);
-        compras.setVisible(true);
+        frmRegistrarCompras Rcompras = new frmRegistrarCompras(compras);
+        Rcompras.setVisible(true);
         this.setVisible(false);
         
     }//GEN-LAST:event_jmiCoRegistrarActionPerformed
@@ -301,7 +307,7 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jmiVRegistrarActionPerformed
 
     private void jmiCoMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCoMostrarActionPerformed
-         frmMostrarCompras view = new frmMostrarCompras(shop);
+         frmMostrarCompras view = new frmMostrarCompras(compras);
          view.setVisible(true);
          this.setVisible(false);
          
@@ -319,6 +325,12 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         mp.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jmiProMostrarActionPerformed
+
+    private void jmiMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiMostrarActionPerformed
+        frmMostrarVentas mv = new frmMostrarVentas(ventas);
+        mv.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jmiMostrarActionPerformed
 
 
     /**

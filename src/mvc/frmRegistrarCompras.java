@@ -199,7 +199,7 @@ public class frmRegistrarCompras extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
-        frmMenuPrincipal menu = new frmMenuPrincipal(null,null,null,comp);
+        frmMenuPrincipal menu = new frmMenuPrincipal(null,null,null,comp,null,null);
         menu.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnRegresarActionPerformed
@@ -291,7 +291,10 @@ public class frmRegistrarCompras extends javax.swing.JFrame {
                 if(jtfId.getText().equals(String.valueOf(aux.getId()))){
                     jtfId.setEditable(false);
                     aux.setMonto(Float.parseFloat(jtfMonto.getText()));
-                    aux.setTitulo(aux.getTitulo());
+                    aux.setTitulo(jtfTitulo.getText());
+                    
+                     aux.setTipo_compra(jcbCompra.getSelectedIndex());
+                    
                     if(rbEfectivo.isSelected()){
                         aux.setTipo_pago(1);
                     }else if(rbTarjeta.isSelected()){

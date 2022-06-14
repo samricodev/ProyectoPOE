@@ -89,7 +89,7 @@ public class frmMostrarCompras extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
-        frmMenuPrincipal menu = new frmMenuPrincipal(null,null,null,compras);
+        frmMenuPrincipal menu = new frmMenuPrincipal(null,null,null,compras,null,null);
         menu.setVisible(true);
         this.setVisible(false);
         

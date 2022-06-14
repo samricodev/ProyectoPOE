@@ -252,7 +252,7 @@ public class frmRegistrarProductos extends javax.swing.JFrame {
 
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
         // TODO add your handling code here:
-        frmMenuPrincipal menu = new frmMenuPrincipal(null,product,null,null);
+        frmMenuPrincipal menu = new frmMenuPrincipal(null,product,null,null,null,null);
         menu.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnRegresarActionPerformed

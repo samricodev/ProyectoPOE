@@ -1,13 +1,14 @@
 //lazaro prueba commit  
 package mvc;
 
+import javax.swing.JOptionPane;
+
 public class frmRegistrarClientes extends javax.swing.JFrame {
 
-    private Cliente client;
+    Cliente clientes;
     
     public frmRegistrarClientes() {
         initComponents();
-        client = null;
     }
 
 
@@ -22,19 +23,23 @@ public class frmRegistrarClientes extends javax.swing.JFrame {
         jlbTipo = new javax.swing.JLabel();
         jlbCompras = new javax.swing.JLabel();
         jlbIncidentes = new javax.swing.JLabel();
-        jtxCliente = new javax.swing.JTextField();
-        jtxNombre = new javax.swing.JTextField();
-        jtxCompras = new javax.swing.JTextField();
+        jtfId = new javax.swing.JTextField();
+        jtfNombre = new javax.swing.JTextField();
+        jtfCompras = new javax.swing.JTextField();
         rbnMinorista = new javax.swing.JRadioButton();
         rbnMayorista = new javax.swing.JRadioButton();
         jbnRegistrar = new javax.swing.JButton();
         jbnRegresar = new javax.swing.JButton();
-        jlbMensaje = new javax.swing.JLabel();
         jcbSi = new javax.swing.JCheckBox();
         jcbNo = new javax.swing.JCheckBox();
-        jButton1 = new javax.swing.JButton();
+        btnEditar = new javax.swing.JButton();
+        btnBuscar = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Clientes");
+        setResizable(false);
 
         jlbTitulo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jlbTitulo.setText("Registrar clientes");
@@ -69,19 +74,37 @@ public class frmRegistrarClientes extends javax.swing.JFrame {
             }
         });
 
-        jlbMensaje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlbMensaje.setText("(AREA DE MENSJAES)");
-
         btngIncidentes.add(jcbSi);
         jcbSi.setText("Si");
 
         btngIncidentes.add(jcbNo);
         jcbNo.setText("No");
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnEditar.setText("Editar");
+        btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnEditarActionPerformed(evt);
+            }
+        });
+
+        btnBuscar.setText("Buscar");
+        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarActionPerformed(evt);
+            }
+        });
+
+        btnEliminar.setText("Eliminar");
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
+
+        btnLimpiar.setText("Limpiar");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
             }
         });
 
@@ -89,145 +112,265 @@ public class frmRegistrarClientes extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(124, 124, 124)
+                        .addComponent(jlbTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(39, 39, 39)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jlbTipo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jlbNombreCliente, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE))
+                                .addComponent(jlbCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jtfId, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jlbIncidentes, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jcbSi)
+                                .addGap(18, 18, 18)
+                                .addComponent(jcbNo))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jlbTipo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jlbNombreCliente, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE))
+                                    .addComponent(jlbCompras))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(54, 54, 54)
-                                        .addComponent(jtxNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
+                                        .addGap(38, 38, 38)
                                         .addComponent(rbnMinorista)
                                         .addGap(18, 18, 18)
-                                        .addComponent(rbnMayorista)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
-                                        .addComponent(jButton1))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jlbCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(45, 45, 45)
-                                .addComponent(jtxCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jlbCompras, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jbnRegistrar)
-                                    .addComponent(jlbIncidentes, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(rbnMayorista))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jcbSi)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jcbNo))
-                                    .addComponent(jtxCompras, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jbnRegresar)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(124, 124, 124)
-                        .addComponent(jlbTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(37, 37, 37))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jlbMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(103, 103, 103))
+                                        .addGap(21, 21, 21)
+                                        .addComponent(jtfCompras, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(21, 21, 21)
+                                        .addComponent(jtfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(btnBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnEditar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbnRegresar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                        .addComponent(btnEliminar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnLimpiar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jbnRegistrar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(65, 65, 65))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jlbTitulo)
-                .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlbCliente)
-                    .addComponent(jtxCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlbNombreCliente)
-                    .addComponent(jtxNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlbTitulo)
+                    .addComponent(jbnRegistrar))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jlbCliente)
+                            .addComponent(jtfId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(11, 11, 11)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jlbNombreCliente)
+                            .addComponent(jtfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jlbTipo)
                             .addComponent(rbnMinorista)
-                            .addComponent(rbnMayorista)))
+                            .addComponent(rbnMayorista))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlbCompras)
+                            .addComponent(jtfCompras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(24, 24, 24)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jlbIncidentes)
+                            .addComponent(jcbSi)
+                            .addComponent(jcbNo))
+                        .addGap(35, 35, 35))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(jButton1)))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlbCompras)
-                    .addComponent(jtxCompras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlbIncidentes)
-                    .addComponent(jcbSi)
-                    .addComponent(jcbNo))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbnRegistrar)
-                    .addComponent(jbnRegresar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jlbMensaje, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
-                .addContainerGap())
+                        .addGap(34, 34, 34)
+                        .addComponent(btnBuscar)
+                        .addGap(34, 34, 34)
+                        .addComponent(btnEditar)
+                        .addGap(40, 40, 40)
+                        .addComponent(btnEliminar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnLimpiar)
+                        .addGap(18, 18, 18)))
+                .addComponent(jbnRegresar)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(589, 389));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbnRegresarActionPerformed
-        frmMenuPrincipal back = new frmMenuPrincipal(null,null,null,null);
+        frmMenuPrincipal back = new frmMenuPrincipal(null,null,null,null,null,clientes);
         back.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jbnRegresarActionPerformed
 
     private void jbnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbnRegistrarActionPerformed
-        int id = Integer.parseInt(jtxCliente.getText());
-        String nombre = jtxNombre.getText();
-        int tipo = 0;
-        int compras = Integer.parseInt(jtxCompras.getText());
+        int id = Integer.parseInt(jtfId.getText());
+        String nombre = jtfNombre.getText();
+        int compras = Integer.parseInt(jtfCompras.getText());
+        String tipoCliente = "";
         boolean incidentes = false;
-        
-        //Evaluar
         if(rbnMinorista.isSelected()){
-            tipo = 1;
-        }else if(rbnMayorista.isSelected()){
-            tipo = 2;
-        }else{
-            jlbMensaje.setText("NINGUNA OPCION SELECCIONADA");
+            tipoCliente = "minorista";
+        } else if(rbnMayorista.isSelected()){
+            tipoCliente = "mayorista";
         }
-        
         if(jcbSi.isSelected()){
             incidentes = true;
-        }else if (jcbNo.isSelected()){
+        } else if(jcbNo.isSelected()){
             incidentes = false;
         }
         
-        Cliente nuevo = new Cliente(id,nombre,tipo,compras,false);
-        
-        //VALIDAR LISTAS
-        if(client == null){
-            //Se agrega el primer nodo a la lista
-            client = nuevo;
+        Cliente nuevo = new Cliente(id,nombre,tipoCliente,compras,incidentes);
+        //Validar Listas 
+        if( clientes == null){
+            //se agrega el primer nodo a la lista 
+             clientes = nuevo;
         }else{
-            //Creamos el apuntador auxiliar
-            Cliente aux = client;
+            //CREAR APUNTADOR AUXILIAR 
+            Cliente aux =  clientes;
             //Recorrer la lista 
             while(aux.getSiguiente() != null){
                 aux = aux.getSiguiente();
             }
             aux.setSiguiente(nuevo);
         }
+        
+        JOptionPane.showMessageDialog(null,"Registro hecho");
+        jtfId.setText(null);
+        jtfCompras.setText(null);
+        jtfNombre.setText(null);
+        btngTipoCliente.clearSelection();
+        btngIncidentes.clearSelection();
     }//GEN-LAST:event_jbnRegistrarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+        Cliente aux = clientes;
+        boolean encontrado = false;
+        if(clientes == null){
+            JOptionPane.showMessageDialog(null, "Lista Vacía");
+        } else {
+            while(aux != null){
+                if(jtfId.getText().equals(String.valueOf(aux.getId()))){
+                    jtfNombre.setText(aux.getNombre());
+                    jtfCompras.setText(String.valueOf(aux.getCompras()));
+                    if(aux.getTipo().equals("minorista")){
+                        rbnMinorista.setSelected(true);
+                    } else if(aux.getTipo().equals("mayorista")){
+                        rbnMayorista.setSelected(true);
+                    } 
+                    if(aux.getIncidentes() == true){
+                        jcbSi.setSelected(true);
+                    } else if(aux.getIncidentes() == false){
+                        jcbNo.setSelected(true);
+                    }
+                        encontrado = true;
+                        break;
+                }
+                    aux = aux.getSiguiente();
+            }
+                if(!encontrado){
+                    JOptionPane.showMessageDialog(null,"Dato no encontrado");
+                }
+        }
+    }//GEN-LAST:event_btnBuscarActionPerformed
+
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        jtfId.setEditable(true);
+        jtfId.setText(null);
+        jtfCompras.setText(null);
+        jtfNombre.setText(null);
+        btngTipoCliente.clearSelection();
+        btngIncidentes.clearSelection();
+    }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+        Cliente aux = clientes;
+        boolean encontrado = false;
+        if(clientes == null){
+            JOptionPane.showMessageDialog(null, "Lista Vacía");
+        } else {
+            while(aux != null){
+                if(jtfId.getText().equals(String.valueOf(aux.getId()))){
+                    aux.setNombre(jtfNombre.getText());
+                    aux.setCompras(Integer.parseInt(jtfCompras.getText()));
+                    if(rbnMinorista.isSelected()){
+                        aux.setTipo("minorista");
+                    } else if(rbnMayorista.isSelected()){
+                        aux.setTipo("mayorista");
+                    }
+                    if(jcbSi.isSelected()){
+                        aux.setIncidentes(true);
+                    } else if(jcbNo.isSelected()){
+                        aux.setIncidentes(false);
+                    }
+                        JOptionPane.showMessageDialog(null, "Cliente con id " + aux.getId() + " ha sido actualizado");
+                        jtfId.setEditable(true);
+                        jtfId.setText(null);
+                        jtfCompras.setText(null);
+                        jtfNombre.setText(null);
+                        btngTipoCliente.clearSelection();
+                        btngIncidentes.clearSelection();
+                        encontrado = true;
+                        break;
+                }
+                    aux = aux.getSiguiente();
+            }
+                if(!encontrado){
+                    JOptionPane.showMessageDialog(null,"Dato no encontrado");
+                }
+        }
+    }//GEN-LAST:event_btnEditarActionPerformed
+
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        Cliente aux = clientes;
+        Cliente anteterior = null;
+        boolean encontrado = false;
+        if (clientes == null){
+            JOptionPane.showMessageDialog(null,"La lista esta vacia");
+        }else{
+            while(aux != null){
+                if(jtfId.getText().equals(String.valueOf(aux.getId())) ){
+                    if(anteterior != null){
+                        //ELIMINANDO CUALQUIER NODO
+                        anteterior.setSiguiente(aux.getSiguiente());
+                    }else{
+                        clientes = aux.getSiguiente();
+                    }
+                    JOptionPane.showMessageDialog(null,"DATO ELIMINADO");
+                    jtfId.setEditable(true);
+                    jtfId.setText(null);
+                    jtfCompras.setText(null);
+                    jtfNombre.setText(null);
+                    btngTipoCliente.clearSelection();
+                    btngIncidentes.clearSelection();
+                    encontrado = true;
+                    break;
+                }
+                anteterior = aux;
+                aux = aux.getSiguiente();
+            }
+            if(!encontrado){ 
+               JOptionPane.showMessageDialog(null,"El dato no se ha encontrado");
+            }
+        }
+    }//GEN-LAST:event_btnEliminarActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -262,9 +405,12 @@ public class frmRegistrarClientes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBuscar;
+    private javax.swing.JButton btnEditar;
+    private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btnLimpiar;
     private javax.swing.ButtonGroup btngIncidentes;
     private javax.swing.ButtonGroup btngTipoCliente;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jbnRegistrar;
     private javax.swing.JButton jbnRegresar;
     private javax.swing.JCheckBox jcbNo;
@@ -272,13 +418,12 @@ public class frmRegistrarClientes extends javax.swing.JFrame {
     private javax.swing.JLabel jlbCliente;
     private javax.swing.JLabel jlbCompras;
     private javax.swing.JLabel jlbIncidentes;
-    private javax.swing.JLabel jlbMensaje;
     private javax.swing.JLabel jlbNombreCliente;
     private javax.swing.JLabel jlbTipo;
     private javax.swing.JLabel jlbTitulo;
-    private javax.swing.JTextField jtxCliente;
-    private javax.swing.JTextField jtxCompras;
-    private javax.swing.JTextField jtxNombre;
+    private javax.swing.JTextField jtfCompras;
+    private javax.swing.JTextField jtfId;
+    private javax.swing.JTextField jtfNombre;
     private javax.swing.JRadioButton rbnMayorista;
     private javax.swing.JRadioButton rbnMinorista;
     // End of variables declaration//GEN-END:variables
