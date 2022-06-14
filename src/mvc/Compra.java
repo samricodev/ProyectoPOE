@@ -8,6 +8,7 @@ public class Compra {
     private float monto;
     private int tipo_pago;
      
+    private Compra siguiente;
     //CONSTRUCTOR 
 
     public Compra(int id, String titulo, int tipo_compra, float monto, int tipo_pago) {
@@ -16,6 +17,8 @@ public class Compra {
         this.tipo_compra = tipo_compra;
         this.monto = monto;
         this.tipo_pago = tipo_pago;
+        this.siguiente = siguiente;
+        this.siguiente = null;
     }
     
     //SETTER N GETTER 
@@ -59,4 +62,13 @@ public class Compra {
     public void setTipo_pago(int tipo_pago) {
         this.tipo_pago = tipo_pago;
     }
+
+    public Compra getSiguiente() {
+        return siguiente;
+    }
+
+    public void setSiguiente(Compra siguiente) {
+        this.siguiente = siguiente;
+    }
+    
 }

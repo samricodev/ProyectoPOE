@@ -315,7 +315,7 @@ public class frmRegistrarProveedores extends javax.swing.JFrame {
                     } else if(jrbOpcion3.isSelected()){
                         aux.setCategoria("Premium");
                     }
-                        JOptionPane.showMessageDialog(null, "Proveedor con id " + aux.getId() + "ha sido actualizado");
+                        JOptionPane.showMessageDialog(null, "Proveedor con id " + aux.getId() + " ha sido actualizado");
                         jtfId.setEditable(true);
                         jtfId.setText(null);
                         jtfNombre.setText(null);
@@ -368,7 +368,7 @@ public class frmRegistrarProveedores extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnEliminarActionPerformed
 
     private void jbtnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnRegresarActionPerformed
-        frmMenuPrincipal mp = new frmMenuPrincipal(null,null,provs);
+        frmMenuPrincipal mp = new frmMenuPrincipal(null,null,provs,null);
         mp.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jbtnRegresarActionPerformed

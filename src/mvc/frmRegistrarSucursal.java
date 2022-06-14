@@ -309,7 +309,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bntRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntRegresarActionPerformed
-        frmMenuPrincipal back = new frmMenuPrincipal(suc,null,null);
+        frmMenuPrincipal back = new frmMenuPrincipal(suc,null,null,null);
         back.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_bntRegresarActionPerformed
@@ -329,7 +329,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         }else if(jcbTipo3.isSelected()){
             tipo = 3;
         } else {
-            jlbMensaje.setText("NINGUNO OPCION SELECCIONADA");
+            JOptionPane.showMessageDialog(null, "NINGUNO OPCION SELECCIONADA");
         }
         
         //Pasamos los argumentos 
@@ -361,7 +361,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         Sucursal aux = suc;
         boolean encontrado = false;
         if(suc == null){
-            jlbMensaje.setText("La lista esta vacia");
+            JOptionPane.showMessageDialog(null, "LISTA VACIA");
         } else{
             while(aux != null){
                 if(jtfId.getText().equals(String.valueOf(aux.getId()))){
@@ -381,7 +381,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                 aux = aux.getSiguiente();
             }
             if(!encontrado){
-                jlbMensaje.setText("El dato no se ha encontrado");
+                JOptionPane.showMessageDialog(null, "DATO NO ENCONTRADO");
             }
         }
     }//GEN-LAST:event_btnBuscarActionPerformed
@@ -391,7 +391,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         Sucursal aux = suc;
         boolean encontrado = false;
         if(suc == null){
-            jlbMensaje.setText("La lista esta vacia");
+            JOptionPane.showMessageDialog(null, "LISTA VACIA");
         } else{
             while(aux != null){
                 if(jtfId.getText().equals(String.valueOf(aux.getId()))){
@@ -399,14 +399,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                     aux.setLocalidad(jtfLocalidad.getText());
                     aux.setCapacidad(Integer.parseInt(jtfCapacidad.getText()));
                     aux.setVentas_prom(Float.parseFloat(jtfVentas.getText()));
-                    if(aux.getTipo() == 1){
-                        jcbTipo1.setSelected(true);
-                    } else if(aux.getTipo() == 2){
-                        jcbTipo2.setSelected(true);
-                    } else if(aux.getTipo() == 3){
-                        jcbTipo3.setSelected(true);
-                    }
-                    aux.setVentas_prom(Integer.parseInt(jtfCapacidad.getText()));
+                    
                     if(jcbTipo1.isSelected()){
                         aux.setTipo(1);
                     }else if(jcbTipo2.isSelected()){
@@ -414,14 +407,14 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                     }else if(jcbTipo3.isSelected()){
                         aux.setTipo(3);
                     }
-                    jlbMensaje.setText("La sucursal con Id " + aux.getId() + " ha sido actualizada");
+                    JOptionPane.showMessageDialog(null,"La sucursal con Id " + aux.getId() + " ha sido actualizada");
                     encontrado = true;
                     break;
                 }
                 aux = aux.getSiguiente();
             }
                 if(!encontrado){
-                    jlbMensaje.setText("La sucursal no se ha encontrado");
+                   JOptionPane.showMessageDialog(null, "SUCURSAL NO ENCONTRADA");
                 }
 
         }
@@ -433,7 +426,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
         Sucursal anteterior = null;
         boolean encontrado = false;
         if (suc == null){
-            jlbMensaje.setText("La lista esta vacia");
+            JOptionPane.showMessageDialog(null, "LISTA VACIA");
         }else{
             while(aux != null){
                 if(jtfId.getText().equals(String.valueOf(aux.getId())) ){
@@ -443,7 +436,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                     }else{
                         suc = aux.getSiguiente();
                     }
-                    jlbMensaje.setText("DATO ELIMINADO");
+                    JOptionPane.showMessageDialog(null, "DATO ELIMINADO");
                     encontrado = true;
                     break;
                 }
@@ -451,7 +444,7 @@ public class frmRegistrarSucursal extends javax.swing.JFrame {
                 aux = aux.getSiguiente();
             }
             if(!encontrado){ 
-                jlbMensaje.setText("El dato no se ha encontrado");
+                JOptionPane.showMessageDialog(null, "DATO NO ENCONTRADO");
             }
         }
         jtfId.setText(null);
