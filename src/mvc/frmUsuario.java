@@ -13,6 +13,8 @@ public class frmUsuario extends javax.swing.JFrame {
     
     public frmUsuario() {        
         initComponents();
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/user-.png"));
+        setIconImage(icon);
     }
 
     

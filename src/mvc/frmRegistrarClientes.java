@@ -1,6 +1,8 @@
 //lazaro prueba commit  
 package mvc;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
 public class frmRegistrarClientes extends javax.swing.JFrame {
@@ -9,6 +11,8 @@ public class frmRegistrarClientes extends javax.swing.JFrame {
     
     public frmRegistrarClientes() {
         initComponents();
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/customer-.png"));
+        setIconImage(icon);
     }
 
 
