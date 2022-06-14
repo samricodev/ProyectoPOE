@@ -268,7 +268,7 @@ public class frmRegistrarProveedores extends javax.swing.JFrame {
                 .addGap(19, 19, 19))
         );
 
-        setSize(new java.awt.Dimension(493, 499));
+        setSize(new java.awt.Dimension(493, 530));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
