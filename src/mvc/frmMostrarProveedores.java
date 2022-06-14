@@ -1,6 +1,8 @@
 
 package mvc;
 
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.table.DefaultTableModel;
 
 public class frmMostrarProveedores extends javax.swing.JFrame {
@@ -8,6 +10,8 @@ public class frmMostrarProveedores extends javax.swing.JFrame {
     Proveedor provers;
     public frmMostrarProveedores(Proveedor provs) {
         initComponents();
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Imagenes/car-.png"));
+        setIconImage(icon);
         provers = provs;
         DefaultTableModel modelo = new DefaultTableModel();
         String cabecera [] = {"Id" , "Nombre" , "Categoria" , "Producto" , "Cobro"};
@@ -48,6 +52,7 @@ public class frmMostrarProveedores extends javax.swing.JFrame {
         jlbTitulo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
@@ -126,7 +131,8 @@ public class frmMostrarProveedores extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 405, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(481, 444));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnRegresarActionPerformed
